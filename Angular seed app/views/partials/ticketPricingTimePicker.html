@@ -1,0 +1,12 @@
+﻿<div class="popover-time-edit">
+    <div class="popover-head">Set {{dayPartLabel}} for this day part</div>
+    <div class="popover-content popover-content-center">
+        <form>
+            <timepicker ng-model="timePicker.value" ng-change="changed()" hour-step="timePickerOptions.hStep"
+                minute-step="timePickerOptions.mStep" show-meridian="timePickerOptions.isMeridian">
+                                                    </timepicker>
+            <button type="button" class="btn btn-success buttons-popover-margins" data-ng-click="applyDayPartTimeEditing(data.dayPart)">Apply</button>
+            <button type="button" class="btn btn-default buttons-popover-margins" data-ng-if="data.dayPart.endTime" data-ng-click="cancelDayPartTimeEditing()">Cancel</button>
+        </form>
+    </div>
+</div>

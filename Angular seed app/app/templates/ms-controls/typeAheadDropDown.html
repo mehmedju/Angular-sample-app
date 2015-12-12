@@ -1,0 +1,13 @@
+﻿<div class="btn-group" data-dropdown="" data-is-open="status.isopen" data-on-toggle="toggled(open)">
+    <input type="text" class="form-control column-ellipsis-overflow" placeholder="{{ngModel.name}}" data-ng-click="toggleDropdown($event)" data-ng-model="typeAheadModel" 
+           data-ng-disabled="disabledInput" data-ng-focus="focused()" data-ng-blur="blurred()" />
+    <a class="close clear-search margin-iput-field-delete" data-ng-show="typeAheadModel" data-ng-click="resetFiltering()" data-ms-on-close-focus-input="">×</a>
+    <ul class="dropdown-menu typeahead-directive-list">
+        <li data-ng-repeat="choice in filtered = ( dropDownItems | filter: filterText)" data-ng-mouseover="getIndexOfListItem($index)" data-ng-if="filtered.length">
+            <a data-ng-click="selectChoice(choice)" data-ng-class="{'typeahead-directive-text': $index==activeIdx}" data-ng-model="idOfSelectedItem">
+                <div style="display: inline-block">{{choice | typeAheadLabel: typeAheadLabel}}</div> 
+            </a>
+        </li>
+        <li class="no-results-directive" data-ng-if="!filtered.length">No items available</li>
+    </ul>
+</div>

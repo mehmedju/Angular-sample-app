@@ -1,0 +1,252 @@
+﻿[
+    {
+        "id": 1,
+        "feature": "300: Rise of an Empire",
+        "studio": {
+            "name": "Fox",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-02-20",
+        "rating": "R",
+        "sites": "Marietta",
+        "start_date": "2014-03-06T23:00:00.000Z",
+        "end_date": "2014-04-06T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "100"
+    },
+    {
+        "id": 2,
+        "feature": "The Monuments Men",
+        "studio": {
+            "name": "Sony",
+            "address": "Studio Address"
+        },
+        "rating": "R",
+        "sites": "North Point",
+        "start_date": "2014-02-06T23:00:00.000Z",
+        "end_date": "2014-04-06T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "100"
+    },
+    {
+        "id": 3,
+        "feature": "Divergent",
+        "studio": {
+            "name": "Universal",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-02-18",
+        "rating": "PG",
+        "start_date": "2014-02-06T23:00:00.000Z",
+        "end_date": "2014-04-06T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "87"
+    },
+    {
+        "id": 4,
+        "feature": "Robocop",
+        "studio": {
+            "name": "Fox",
+            "address": "Studio Address"
+        },
+        "rating": "PG",
+        "sites": "Marietta",
+        "start_date": "2014-02-24T23:00:00.000Z",
+        "end_date": "2014-04-24T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "100"
+    },
+    {
+        "id": 5,
+        "feature": "Thor:The Dark World",
+        "studio": {
+            "name": "Fox",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-03-28",
+        "rating": "PG",
+        "sites": "North Point",
+        "start_date": "2014-02-08T23:00:00.000Z",
+        "end_date": "2014-04-08T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "87"
+    },
+    {
+        "id": 6,
+        "feature": "American Hustle",
+        "studio": {
+            "name": "Fox",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-04-05",
+        "rating": "PG",
+        "sites": "North Point",
+        "start_date": "2014-02-06T23:00:00.000Z",
+        "end_date": "2014-04-06T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "100"
+    },
+    {
+        "id": 7,
+        "feature": "The Wolf on Wall Street",
+        "studio": {
+            "name": "Fox",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-02-10",
+        "rating": "PG",
+        "start_date": "2014-02-16T23:00:00.000Z",
+        "end_date": "2014-04-16T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "87"
+    },
+    {
+        "id": 8,
+        "feature": "Non-Stop",
+        "studio": {
+            "name": "Universal",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-02-11",
+        "rating": "PG",
+        "start_date": "2014-03-06T23:00:00.000Z",
+        "end_date": "2014-05-06T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "100"
+    },
+    {
+        "id": 9,
+        "feature": "Prisoners",
+        "studio": {
+            "name": "Fox",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-02-27",
+        "rating": "R",
+        "sites": "North Point",
+        "start_date": "2014-02-06T23:00:00.000Z",
+        "end_date": "2014-04-06T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "87"
+    },
+    {
+        "id": 10,
+        "feature": "Mr. Peabody & Sherman",
+        "studio": {
+            "name": "Fox",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-04-01",
+        "rating": "PG",
+        "sites": "North Point",
+        "start_date": "2014-03-06T23:00:00.000Z",
+        "end_date": "2014-04-06T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "87"
+    },
+    {
+        "id": 11,
+        "feature": "The LEGO Movie",
+        "studio": {
+            "name": "WB",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-03-07",
+        "rating": "PG",
+        "sites": "North Point",
+        "start_date": "2014-04-06T22:00:00.000Z",
+        "end_date": "2014-05-06T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "100"
+    },
+    {
+        "id": 12,
+        "feature": "The Wind Rises",
+        "studio": {
+            "name": "Walt Disney Pictures",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-01-29",
+        "rating": "PG",
+        "sites": "North Point",
+        "start_date": "2014-04-16T22:00:00.000Z",
+        "end_date": "2014-05-16T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "100"
+    },
+    {
+        "id": 13,
+        "feature": "3 Days to Kill",
+        "studio": {
+            "name": "Fox",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-03-10",
+        "rating": "R",
+        "sites": "North Point",
+        "start_date": "2014-04-18T22:00:00.000Z",
+        "end_date": "2014-05-18T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "87"
+    },
+    {
+        "id": 14,
+        "feature": "Ride Along",
+        "studio": {
+            "name": "Fox",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-03-15",
+        "rating": "R",
+        "sites": "North Point",
+        "start_date": "2014-04-11T22:00:00.000Z",
+        "end_date": "2014-05-11T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "100"
+    },
+    {
+        "id": 15,
+        "feature": "About Last Night (2014)",
+        "studio": {
+            "name": "Fox",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-02-28",
+        "rating": "PG",
+        "sites": "North Point",
+        "start_date": "2014-04-11T22:00:00.000Z",
+        "end_date": "2014-05-11T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "87"
+    },
+    {
+        "id": 16,
+        "feature": "Pompeii",
+        "studio": {
+            "name": "Fox",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-03-21",
+        "rating": "R",
+        "sites": "North Point",
+        "start_date": "2014-04-14T22:00:00.000Z",
+        "end_date": "2014-05-14T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "100"
+    },
+    {
+        "id": 17,
+        "feature": "Mr. Peabody & Sherman",
+        "studio": {
+            "name": "Fox",
+            "address": "Studio Address"
+        },
+        "release_date": "2014-02-24",
+        "rating": "PG",
+        "sites": "Marietta",
+        "start_date": "2014-03-10T23:00:00.000Z",
+        "end_date": "2014-04-10T22:00:00.000Z",
+        "booking_terms": "Tiered 70/60/50", 
+		"duration": "87"
+    }
+]

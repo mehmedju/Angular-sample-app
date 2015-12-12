@@ -1,0 +1,79 @@
+<div class="modal-content modal-pricing-font modal-minimum-width" data-ng-show="isVisible">
+	<div class="modal-header modal-header-pricing">
+		<button type="button" class="close" data-ng-click="closeModal()">&times;</button>
+		<h4 class="modal-title" id="myModalLabel">Edit modifier</h4>
+	</div>
+	<div class="modal-body modal-body-height">
+		<div class="col-xs-6 no-padding-left">
+			<div class="col-lg-12 col-xs-12 col-sm-12 no-padding-left no-padding-right">
+				<!-- Experience elements -->
+				<div class="form-group">
+					<label for="inputAudName" class="control-label">Experience:</label>
+					<div class="input-group">
+						<div class="filter-field-full-width" data-ms-type-ahead-drop-down="experienceCollection" data-type-ahead-label="name" data-ng-model="selectedExperience"></div>
+						<span class="input-group-btn">
+							<button class="btn btn-default green-btn-experiences" data-ng-class="{'btn-disabled-experiences': selectedExperience.length > 0}"
+									data-ng-click="selectedExperience.length == 0 && manageExperiences() ">
+								<i class="fa fa-ellipsis-h"></i>
+							</button>
+						</span>
+					</div>
+				</div>
+				<div class="experiences-results form-group" data-ng-if="selectedExperience.length">
+					<div class="list default-cursor">
+						<div class="row no-margin-left-right relative">
+							<div class="col-xs-2 no-padding-left no-padding-right">
+								<img class="img-responsive margin-icons-top" data-ng-src="{{selectedExperience[0].smallIcon}}" />
+							</div>
+							<div class="col-xs-9">
+								<p class="title">{{selectedExperience[0].name}}</p>
+								<p class="description">{{selectedExperience[0].description}}</p>
+							</div>
+							<div class="remove-list-item-icon-modifiers" data-ng-click="selectedExperience.length = 0"><i class="fa fa-times"></i></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-xs-6 no-padding-right">
+			<div class="col-xs-12 pricing-right pricing-modifier">
+				<h4 class="divider">Pricing</h4>
+				<div class="radio-button-modal-modifiers">
+					<input type="radio" name="radiog_dark" id="radio4" class="css-checkbox-popover" value="increase" data-ng-model="modifier.prices.modifierType" /><label for="radio4" class="css-label-popover ">Increase</label>
+				</div>
+				<div class="radio-button-modal-modifiers">
+					<input type="radio" name="radiog_dark" id="radio5" class="css-checkbox-popover" value="decrease" data-ng-model="modifier.prices.modifierType" checked="checked" /><label for="radio5" class="css-label-popover ">Decrease</label>
+				</div>
+				<div class="radio-button-modal-modifiers">
+					<input type="radio" name="radiog_dark" id="radio6" class="css-checkbox-popover" value="override" data-ng-model="modifier.prices.modifierType" /><label for="radio6" class="css-label-popover ">Override prices</label>
+				</div>
+				<div class="right-panel-scroll col-xs-12 no-padding-left no-padding-right">
+					<div data-ng-repeat="ticketClass in ticketClasses">
+						<div class="col-xs-12 no-padding-left" data-ng-repeat="tc in modifier.prices.ticketClasses" data-ng-if="tc.id == ticketClass.id">
+							<div class="col-xs-4 no-padding-left">
+								<label for="inputAudName" class="control-label ticket-classes-label-modifier">{{ticketClass.name}}:</label>
+							</div>
+							<div class="col-xs-4 no-padding-left">
+								<div class="form-group">
+									<input type="text" class="form-control" data-ng-model="tc.value" data-ng-disabled="tc.omit" />
+								</div>
+							</div>
+							<div class="col-xs-4 no-padding-right no-padding-left">
+								<div class="checkbox-style-modifier no-padding-left omit-class-margin">
+									<input id="{{ticketClass.id}}" class="css-checkbox css-checkbox-modifier" type="checkbox" data-ng-model="tc.omit" />
+									<label for="{{ticketClass.id}}" class="css-label checkbox-style-modifier-label css-checkbox-modifier">Omit ticket class</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-primary" data-ng-click="addModifier()">Save modifier</button>
+		<button type="button" class="btn btn-default" data-ng-click="closeModal()">Cancel</button>
+	</div>
+</div>
+

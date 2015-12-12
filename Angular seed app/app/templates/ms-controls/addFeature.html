@@ -1,0 +1,17 @@
+﻿<div class="feature-results">
+    <p class="clear-all-features"><a href="" data-ng-click="removeAllSelectedItems()">Remove all</a></p>
+    <div class="list" data-ng-repeat="item in tagsCollection track by $index">
+        <div class="row">
+            <div class="col-sm-2">
+                <img class="img-responsive poster" data-ng-src="{{item.poster}}">
+            </div>
+            <div class="col-sm-8">
+                <p class="title">{{item.name}}</p>
+                <p class="description">{{item.description}}</p>
+            </div>
+            <div class="col-sm-2 icon-middle">
+                <i class="fa fa-times icon-close" data-ng-click="removeSelectedFeature(item)"></i>
+            </div>
+        </div>
+    </div>
+</div>

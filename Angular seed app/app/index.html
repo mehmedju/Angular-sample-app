@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+    <meta name="google" value="notranslate" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>NCR CineCentral</title>
+
+    <!-- references -->
+	<script src="packages/AngularJS.Core.1.2.14/content/scripts/angular.min.js"></script>
+	<script src="packages/AngularJS.Route.1.2.14/content/scripts/angular-route.min.js"></script>
+	<script src="packages/underscore.js.1.5.2/Content/Scripts/underscore.min.js"></script>
+	<script src="js/vendor/angular-translate.js"></script>
+	<script src="js/vendor/angular-gantt.js"></script>
+	<script src="js/vendor/angular-translate-loader-static-files.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/directives.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/msApp.min.js"></script>
+	<script src="js/msCommonControls.min.js"></script>
+	<script src="js/services.js"></script>
+	<link rel="stylesheet" href="css/font-awesome.css"/>
+	<link rel="stylesheet" href="css/msApp.min.css"/>
+	<link rel="stylesheet" href="css/gantt/gantt.css"/>
+	<link rel="stylesheet" href="css/gantt/gantt-classes-overrides.css"/>
+    <!-- end -->
+</head>
+
+<body>
+    <div class="cover-container">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html" data-ng-controller="bookingCtrl">
+                        <img class="img-responsive img-inline" src="img/logo-green.png" style="position: relative; top: -2px; opacity: 0.5" />
+                        <span data-ng-click="changeLanguage('en-us')">{{ 'Header.NCR' | translate}}</span></a>
+                </div>
+                <div data-ng-include="'../views/navBar.html'"></div>
+            </div>
+        </div>
+
+        <div data-ng-view=""></div>
+    </div>
+
+</body>
+</html>

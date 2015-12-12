@@ -1,0 +1,10 @@
+﻿<div class="modal-header modal-header-confirmation">
+    <h3 class="modal-title">{{ options.title }}</h3>
+</div>
+<div class="modal-body modal-body-confirmation">
+    {{ options.content }}
+</div>
+<div class="modal-footer modal-footer-confirmation">
+    <button class="btn btn-primary" data-ng-click="ok()">{{options.buttonOk || 'OK' }}</button>
+    <button class="btn btn-default" data-ng-click="cancel()" data-ng-if="options.buttonCancel">{{options.buttonCancel || 'Cancel' }}</button>
+</div>

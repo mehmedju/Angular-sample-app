@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+		<title>NCR CineCenral - Site Management</title>
+
+		<!-- CSS -->
+		<link href="../app/css/msApp.min.css" rel="stylesheet">
+		<link href="../app/css/font-awesome.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+	</head>
+
+	<body class="booking">
+
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img class="img-responsive img-inline" src="img/logo-green.png" style="position:relative; top:-2px; opacity:0.5" />NCR CinéCentral</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="dashboard.html">Dashboard</a></li>
+						<li><a href="dashboard-feature.html">Sites</a></li>
+						<li class="dropdown active">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Films <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="dashboard-feature.html">Add a Feature</a></li>
+								<li><a href="dashboard-feature.html">Book a Feature</a></li>
+								<li><a href="dashboard-feature.html">Schedule a Feature</a></li>
+								<li class="divider"></li>
+								<li><a href="dashboard-feature.html">Help</a></li>
+							</ul>
+						</li>
+						<li><a href="dashboard-feature.html">Products</a></li>
+						<li><a href="dashboard-feature.html">Revenue Audit</a></li>
+						<li><a href="dashboard-feature.html">Promotions</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<!-- <li><a href="#"><i class="fa fa-dot-circle-o brand icon-separated"></i>Signed in as John Smith</a></li> -->
+						<li><a href="index.html"><i class="fa fa-sign-out"></i> Sign out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row no-margin">
+				<div class="col-md-8 main">
+
+					<h2 class="sub-header">NCR Sites</h2>
+
+					<div class="row constrain">
+						<div class="col-md-12 table-header-form">
+
+							<a class="btn btn-success pull-right disabled" href="#" role="button"><i class="fa fa-plus"></i> Add new</a>
+
+							<div class="col-sm-6 no-padding-left">
+								<div class="input-group has-feedback">
+									<input type="text" class="form-control" placeholder="Search sites...">
+									<a href="#" class="close clear-search hidden">&times;</a>
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+									</span>
+								</div><!-- /input-group -->
+							</div>
+
+						</div>
+					</div>
+
+
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>
+
+										<div class="dropdown display-inline">
+											<a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa  fa-chevron-circle-down"></i></a>
+											<ul class="dropdown-menu filter" role="menu" aria-labelledby="dropdownMenu1">
+												<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-asc icon-separated"></i>Sort A - Z</a></li>
+												<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-desc icon-separated"></i>Sort Z - A</a></li>
+												<li role="presentation" class="divider"></li>
+												<li role="presentation" class="filter-search">
+													<p>Filter &middot; <a href="#">Select all</a> &middot; <a href="#">Clear</a></p>                        
+													<input type="text" class="form-control input-sm" placeholder="Search...">
+													<div class="filter-options">
+														<ul>
+															<li class="active">Something</li>
+															<li class="active">Something Something SomethingSomething Something</li>
+															<li>Something Something Something Something Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+														</ul>
+													</div>
+												</li>
+
+												<li role="presentation" class="divider"></li>
+												<li class="filter-confirmation">
+													<button type="button" class="btn btn-success btn-sm">OK</button>
+													<button type="button" class="btn btn-default btn-sm">Cancel</button>
+												</li>
+											</ul>
+										</div>
+										Name
+									</th>
+									<th>
+										<div class="dropdown display-inline">
+											<a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+										</div>
+										City
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Alpharetta Theater</td>
+									<td>Atlanta</td>
+								</tr>
+								<tr>
+									<td>Buckhead Amphitheater</td>
+									<td>Atlanta</td>
+								</tr>
+								<tr>
+									<td>San Fierro Grand Hall</td>
+									<td>San Andreas</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="col-md-4 movie-details main">
+					<h2 class="sub-header">Edit site</h2>
+					<div class="well details clearfix">
+
+						<form role="form">
+							<div class="form-group">
+								<label for="input1" class="control-label">Name:</label>
+								<input type="text" class="form-control" id="input1" placeholder="Alpharetta Theater">
+							</div>
+							<div class="form-group">
+								<label for="input3" class="control-label">Address Line 1:</label>
+								<input type="text" class="form-control" id="input2" placeholder="Alpharetta 123">
+							</div>
+							<div class="form-group">
+								<label for="input3" class="control-label">Address Line 2:</label>
+								<input type="text" class="form-control" id="input2" placeholder="1st Floor">
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-6">
+									<label for="input3" class="control-label">City:</label>
+									<input type="text" class="form-control" id="input2" placeholder="Atlanta">
+								</div>
+								<div class="form-group col-xs-6">
+									<label for="input3" class="control-label">State:</label>
+									<select class="form-control">
+										<option>Georgia</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-6">
+									<label for="input3" class="control-label">Postal code:</label>
+									<input type="text" class="form-control" id="input2" placeholder="30301">
+								</div>
+								<div class="form-group col-xs-6">
+									<label for="input3" class="control-label">Currency</label>
+									<select class="form-control">
+										<option>USD</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</div>
+							<div class="row auditorium-stats">
+								<div class="col-xs-12">
+									<h4 class="divider">Tasks</h4>
+									<div class="task-icon"><a href="#" data-toggle="modal" data-target="#myModal"><div class="big-number"><img src="img/auditorium%20icon.png"></div><div class="task-title">Auditoriums (7)</div></a></div>
+								</div>
+							</div>
+					<div class="row margin-top-buttons-right-panel">
+						<div class="col-sm-9 col-xs-9">
+							<div class="form-group">
+								<button type="submit" class="btn btn-sm btn-success margin-bottom-buttons">Save</button>
+								<button type="submit" class="btn btn-sm btn-success margin-bottom-buttons">Save &amp; New</button>
+								<button type="submit" class="btn btn-sm btn-default">Cancel</button>
+							</div>
+						</div>
+						<div class="col-sm-3 col-xs-3">
+							<button type="submit" class="btn btn-sm btn-danger pull-right"><i class="fa fa-times icon-separated"></i>Delete</button>
+						</div>
+					</div>
+						</form>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal modal-wide" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="auditoriums-left">
+						<div class="find-auditorium">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Quick find...">
+								<a href="#" class="close clear-search hidden">&times;</a>
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+								</span>
+							</div><!-- /input-group -->
+						</div>
+
+						<div class="list-auditorium">
+							<ul>
+								<li class="active">Auditorium 1</li>
+								<li>Auditorium 2<span class="no-seats-preview">250</span></li>
+								<li>Auditorium 3<span class="no-seats-preview">24</span></li>
+								<li>Auditorium 4<span class="no-seats-preview">100</span></li>
+								<li>Auditorium 5<span class="no-seats-preview">120</span></li>
+								<li>Auditorium 6<span class="no-seats-preview">120</span></li>
+								<li>Auditorium 7<span class="no-seats-preview">24</span></li>
+								<li>Auditorium 8<span class="no-seats-preview">24</span></li>
+								<li>Auditorium 9<span class="no-seats-preview">100</span></li>
+								<li>Auditorium 10<span class="no-seats-preview">120</span></li>
+								<li>Auditorium 11<span class="no-seats-preview">120</span></li>
+								<li>Auditorium 12<span class="no-seats-preview">24</span></li>  
+								<li>Auditorium 13<span class="no-seats-preview">120</span></li>
+								<li>Auditorium 14<span class="no-seats-preview">120</span></li>
+								<li>Auditorium 15<span class="no-seats-preview">24</span></li>                                    
+							</ul>
+						</div>
+
+					</div>
+					<div class="new-auditorium">
+						<a href="#"><i class="fa fa-plus icon-separated-5"></i>Add new</a>      
+					</div>
+					<div class="auditoriums-right">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel">Alpharetta Theater</h4>
+						</div>
+						<div class="modal-body">
+
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label for="inputAudName" class="col-sm-2 control-label">Name</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="inputAudName" placeholder="Auditorium 1">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputCapacity" class="col-sm-2 control-label">Capacity</label>
+									<div class="col-sm-2">
+										<input type="text" class="form-control" id="inputCapacity" placeholder="120">
+									</div>
+								</div>
+							</form>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+							<button type="submit" class="btn btn-danger pull-left"><i class="fa fa-times icon-separated"></i>Delete</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<!-- JavaScript
+================================================== -->
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+				e.stopPropagation();
+			});
+		</script>
+		<script type="text/javascript">
+			// $('.modal-wide')
+			// .on('show.bs.modal', function() {
+			// var height = $(window).height() - 200;
+			//     $(this).find(".modal-body").css("height", height);
+			// });
+			// </script>
+
+	</body>
+</html>

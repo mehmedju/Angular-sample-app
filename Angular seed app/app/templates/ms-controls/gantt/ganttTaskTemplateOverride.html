@@ -1,0 +1,30 @@
+﻿<div id="gantt-task-{{task.id}}" class="relative" 
+    data-ng-class="{'gantt-task':true, 'performance-placement-preview':task.data.hasOwnProperty('preview'), 'opacity-editing-performance': task.data.isActive || task.data.copying, 'overlapping-border': task.data.overlapping}"
+    data-ng-style="{'left': (task.width === 0 && (task.left-0.3) +'em') || ($parent.$parent.$parent.zoom.isZoomInMode && task.left+'%') || task.left+'em', 'width': ($parent.$parent.$parent.zoom.isZoomInMode && task.width+'%' || task.width+'em'), 'z-index': (task.isMoving === true && 1  || task.priority || ''), 'background-color': task.color}"
+    data-ng-mouseleave="$parent.$parent.activePopover=false">
+    <gantt-bounds ng-if="task.bounds !== undefined" ng-model="task"></gantt-bounds>
+    <gantt-tooltip ng-if="$parent.$parent.activePopover==task.id" ng-model="task"></gantt-tooltip>
+    <div class="gantt-task-image relative" data-ng-show="!$parent.$parent.$parent.zoom.isZoomInMode">
+        <div data-ng-if="task.data.image">
+            <img class="img-responsive poster" data-ng-src="{{task.data.image}}" style="pointer-events: none;">
+        </div>
+    </div>
+    <div class="gantt-task-content gant-task-content-title" data-ng-class="{'gant-task-content-title-zoom gant-task-content-title-zoom gantt-title-task-weight gantt-task-content-zoom' : $parent.$parent.$parent.zoom.isZoomInMode}"><span>{{ task.subject }}</span>
+        <div data-ng-show="$parent.$parent.$parent.zoom.isZoomInMode" style="white-space: nowrap; width: 75%; margin-top: 2px; overflow: hidden;"><i class="fa fa-clock-o"></i>{{ task.from | date:'HH:mm'}} - {{ task.to | date:'HH:mm' }}</div>
+        <span data-ng-show="!$parent.$parent.$parent.zoom.isZoomInMode" class="gantt-rating-title">{{task.data.rating}}</span></div>
+    <div class="gantt-performace-box-icons-wrapper" style="pointer-events: none;">
+        <div class="gantt-performace-box-icons" data-ng-show="!$parent.$parent.$parent.$parent.zoom.isZoomInMode" data-ng-repeat="modifier in task.data.modifiers | limitTo: task.data.duration>=140 ? 5 : task.data.duration>=120 ? 4 : task.data.duration>=95 ? 3 : task.data.duration>=60 ? 2 : 1">
+            <img data-ng-src="{{modifier.icon}}" class="img-responsive gantt-image-width-tags"></img>
+
+        </div>
+    </div>
+    <div class="gantt-task-content gant-task-content-description gantt-popover-box-time-short" data-ng-class="{'gantt-task-content-zoom' : $parent.$parent.$parent.zoom.isZoomInMode}" data-ng-show="!$parent.$parent.$parent.zoom.isZoomInMode">
+        <span>
+            <i class="fa fa-clock-o"></i>
+            {{ task.from | date:'HH:mm'}} - {{ task.to | date:'HH:mm' }}
+        </span>
+    </div>
+    <div class="gantt-task-more-info" data-ng-class="{'gantt-task-more-info-zoom' : $parent.$parent.$parent.zoom.isZoomInMode}" data-ng-click="$parent.$parent.activePopover=!$parent.$parent.activePopover && task.id;"><i class="fa fa-info-circle" data-info="true"></i></div>
+    <div class="gantt-overlap-warning" data-ng-if="task.data.overlapping"><i class="fa fa-exclamation-circle"></i></div>
+    <div data-ng-class="{'gantt-performance-box-revert': task.data.unmodifiedValues || !task.data.preview}" data-ng-class="{'gantt-performance-box-revert-zoom' : task.data.unmodifiedValues}" data-ng-if="!$parent.$parent.$parent.isInCopyMode && task.data.preview && !task.data.copying" data-revert-single="true"><i data-ng-class="{'undo-item-icon-zoom' : $parent.$parent.$parent.$parent.zoom.isZoomInMode, 'fa fa-undo undo-item-icon' : task.data.unmodifiedValues}" data-revert-single="true"></i></div>
+</div>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+		<title>NCR CineCenral - Features</title>
+
+
+		<!-- CSS -->
+		<link href="../app/css/msApp.min.css" rel="stylesheet">
+		<link href="../app/css/font-awesome.css" rel="stylesheet">
+
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+	</head>
+
+	<body class="booking">
+
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img class="img-responsive img-inline" src="img/logo-green.png" style="position:relative; top:-2px; opacity:0.5" />NCR CinéCentral</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="dashboard.html">Dashboard</a></li>
+						<li><a href="dashboard-feature.html">Sites</a></li>
+						<li class="dropdown active">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Films <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="dashboard-feature.html">Add a Feature</a></li>
+								<li><a href="dashboard-feature.html">Book a Feature</a></li>
+								<li><a href="dashboard-feature.html">Schedule a Feature</a></li>
+								<li class="divider"></li>
+								<li><a href="dashboard-feature.html">Help</a></li>
+							</ul>
+						</li>
+						<li><a href="dashboard-feature.html">Products</a></li>
+						<li><a href="dashboard-feature.html">Revenue Audit</a></li>
+						<li><a href="dashboard-feature.html">Promotions</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<!-- <li><a href="#"><i class="fa fa-dot-circle-o brand icon-separated"></i>Signed in as John Smith</a></li> -->
+						<li><a href="index.html"><i class="fa fa-sign-out"></i> Sign out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row no-margin">
+				<div class="col-md-8 main">
+
+					<!-- Info alert begins -->
+
+					<div class="alert alert-info fade in">
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						<strong>Information!</strong> This is an info message that contains some text.
+					</div>
+
+					<!-- Error alert ends -->
+
+					<h2 class="sub-header">Features</h2>
+
+					<div class="row constrain">
+						<div class="col-md-12 table-header-form">
+
+							<a class="btn btn-success pull-right disabled" href="#" role="button"><i class="fa fa-plus"></i> Add new</a>
+
+							<div class="col-sm-6 no-padding-left">
+								<div class="input-group has-feedback">
+									<input type="text" class="form-control" placeholder="Search features...">
+									<a href="#" class="close clear-search hidden">&times;</a>
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+									</span>
+								</div><!-- /input-group -->
+							</div>
+
+						</div>
+					</div>
+
+
+					<div class="table-responsive">
+						<table class="table table-striped align-last">
+							<thead>
+								<tr>
+									<th>
+
+										<div class="dropdown display-inline">
+											<a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa  fa-chevron-circle-down"></i></a>
+											<ul class="dropdown-menu filter" role="menu" aria-labelledby="dropdownMenu1">
+												<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-asc icon-separated"></i>Sort A - Z</a></li>
+												<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-desc icon-separated"></i>Sort Z - A</a></li>
+												<li role="presentation" class="divider"></li>
+												<li role="presentation" class="filter-search">
+													<p>Filter &middot; <a href="#">Select all</a> &middot; <a href="#">Clear</a></p>                        
+													<input type="text" class="form-control input-sm" placeholder="Search...">
+													<div class="filter-options">
+														<ul>
+															<li class="active">Something</li>
+															<li class="active">Something Something SomethingSomething Something</li>
+															<li>Something Something Something Something Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+															<li>Something</li>
+														</ul>
+													</div>
+												</li>
+
+												<li role="presentation" class="divider"></li>
+												<li class="filter-confirmation">
+													<button type="button" class="btn btn-success btn-sm">OK</button>
+													<button type="button" class="btn btn-default btn-sm">Cancel</button>
+												</li>
+											</ul>
+										</div>
+										Name
+									</th>
+									<th>
+
+										<div class="dropdown display-inline">
+											<a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+										</div>
+										Release Date
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>300: Rise of an Empire</td>
+									<td>2014-02-20</td>
+								</tr>
+								<tr>
+									<td>Mr. Peabody &amp; Sherman</td>
+									<td>2014-02-20</td>
+								</tr>
+								<tr>
+									<td>Non-Stop</td>
+									<td>2014-02-20</td>
+								</tr>
+								<tr>
+									<td>The LEGO Movie</td>
+									<td>2014-02-20</td>
+								</tr>
+								<tr>
+									<td>The Wind Rises</td>
+									<td>2014-02-20</td>
+								</tr>
+								<tr>
+									<td>The Monuments Men</td>
+									<td>2014-02-20</td>
+								</tr>
+								<tr>
+									<td>3 Days to Kill</td>
+									<td>2014-02-20</td>
+								</tr>
+								<tr>
+									<td>12 Years a Slave</td>
+									<td>2014-02-20</td>
+								</tr>
+								<tr>
+									<td>Mr. Peabody &amp; Sherman</td>
+									<td>2014-02-20</td>
+								</tr>
+								<tr>
+									<td>Ride Along</td>
+									<td>2014-02-20</td>
+								</tr>
+								<tr class="selected">
+									<td>RoboCop (2014)</td>
+									<td>2014-02-20</td>
+								</tr> 
+								<td>About Last Night (2014)</td>
+								<td>2014-02-20</td>
+							</tr>                
+						<tr>
+							<td>Pompeii</td>
+							<td>2014-02-20</td>
+						</tr>
+						<tr>
+							<td>American Hustle</td>
+							<td>2014-02-20</td>
+						</tr>
+						<tr>
+							<td>Gravity</td>
+							<td>2014-02-20</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="col-md-4 movie-details main">
+			<h2 class="sub-header">New feature</h2>
+			<div class="well details clearfix">
+
+				<form role="form"> 
+					<div class="col-md-12">           
+						<div class="col-md-8">
+							<div class="form-group">
+								<label for="input1" class="control-label">Lookup:</label>
+								<input type="text" class="form-control" id="input1" placeholder="Search features from TMDB">
+							</div>
+							<div class="form-group">
+								<label for="input3" class="control-label">Name:</label>
+								<p class="form-text">RoboCop</p>
+							</div>
+							<div class="form-group">
+								<label for="input3" class="control-label">Duration:</label>
+								<p class="form-text">108 mins</p>
+							</div>
+							<div class="form-group">
+								<label for="input3" class="control-label">Rating:</label>
+								<p class="form-text">PG-13</p>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Release date:</label>
+								<p class="form-text">Feb 12, 2014</p>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Tagline:</label>
+								<p class="form-text">Crime has a new enemy.</p>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Synopsis:</label>
+								<p class="form-text">In 2028 Detroit, when Alex Murphy - a loving husband, father and good cop - is critically injured in the line of duty, the multinational conglomerate OmniCorp sees their chance for a part-man, part-robot police officer.</p>
+							</div>                    
+						</div>
+						<div class="col-md-4">
+							<img class="img-responsive poster" src="img/robocop.jpg">
+						</div>
+					</div>
+					<div class="row no-margin-left-right">
+						<div class="col-md-8">
+							<div class="form-group">
+								<label for="input1" class="control-label">Experiences:</label>
+								<div class="input-group">
+									<input type="text" class="form-control" id="inputAudName" placeholder="Start typing..."><span class="input-group-btn"><button class="btn btn-default green-btn-experiences" type="button" href="#" data-toggle="modal" data-target="#ExpModal" role="button"><i class="fa fa-ellipsis-h"></i></button></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+						</div>                      
+					</div>
+					<div class="row no-margin-left-right ">
+						<div class="col-md-6 no-padding-left">
+							<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/imax.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+							<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/dts.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+							<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/dbox.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+							<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/dd.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+						</div> 
+						<div class="col-md-2 no-padding-right experiences-align-right">
+							<p class="view-all-experiences relative"><a href="#">+9 more</a></p>
+							<div class="popover-multiple-price-edit experiences-popover-size"><div class="popover-head">Selected experiences</div><div class="popover-content"><form>
+								<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/imax.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+								<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/dts.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+								<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/dbox.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+								<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/thx.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+								<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/imax.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+								<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/dts.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+								<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/dbox.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+								<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/dts.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+								<div class="logo-tags experiences-tags"><img class="img-responsive image-width-tags" src="img/imax.png"><span class="delete-experience"><i class="fa fa-times"></i></span></div>
+								<div class="col-md-12">
+									<button type="button" class="btn btn-default pull-right buttons-popover-margins " data-dismiss="modal">Close</button>
+								</div>
+								</form></div></div>
+						</div>
+						<div class="col-md-4">
+						</div>
+					</div>                    
+					<div class="form-group last relative">
+						<button type="submit" class="btn btn-sm btn-success">Save</button>
+						<button type="submit" class="btn btn-sm btn-success">Save &amp; New</button>
+						<button type="submit" class="btn btn-sm btn-default">Cancel</button>
+						<button type="submit" class="btn btn-sm btn-danger cancel-button"><i class="fa fa-times icon-separated"></i>Delete</button>
+					</div>
+
+
+				</form>
+
+
+
+
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- Modal creating new experience -->
+
+
+<div class="modal modal-wide modal-height" id="ExpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-experiences-wide">
+		<div class="modal-content modal-experiences-font">
+			<div class="modal-header modal-experieces-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Manage experiences</h4>
+			</div>
+			<div class="modal-body modal-body-height">
+				<div class="col-sm-6 no-padding-left">
+					<div class="form-group">
+						<label for="inputAudName" class="control-label">Experiences:</label>
+						<input type="text" class="form-control" id="inputAudName" placeholder="Start typing...">
+					</div>
+					<div class="experiences-results">
+						<div class="list">
+							<div class="row no-margin-left-right">
+								<div class="col-sm-2 no-padding-left no-padding-right">
+									<img class="img-responsive margin-icons-top" src="img/dbox.png">
+								</div>
+								<div class="col-sm-10">
+									<p class="title">Dbox experience</p>
+									<p class="description">Your seat moves according to what is happening on the screen...</p>
+								</div>
+							</div>
+						</div>
+						<div class="list experiences-list-selected">
+							<div class="row no-margin-left-right">
+								<div class="col-sm-2 no-padding-left no-padding-right">
+									<img class="img-responsive margin-icons-top" src="img/imax.png">
+								</div>
+								<div class="col-sm-10">
+									<p class="title">IMAX experience</p>
+									<p class="description">A technique of widescreen cinematography which produces...</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 no-padding-right">
+					<div class="col-sm-6 no-padding-left">
+						<div class="checkbox-left checkbox-left-experiences">
+							<div class="checkbox-style checkbox-style-experiences no-padding-left">
+								<input id="demo_box_3" class="css-checkbox" type="checkbox" checked="checked" />
+								<label for="demo_box_3" name="demo_lbl_3" class="css-label">Feature experience</label>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-sm-6 no-padding-right">
+						<div class="checkbox-left  checkbox-left-experiences">
+							<div class="checkbox-style checkbox-style-experiences no-padding-right">
+								<input id="demo_box_2" class="css-checkbox" type="checkbox" />
+								<label for="demo_box_2" name="demo_lbl_2" class="css-label">Auditorium experience</label>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 col-xs-12 col-sm-12 no-padding-left no-padding-right">
+						<div class="form-group">
+							<label for="input1" class="control-label">Name:</label>
+							<input type="text" class="form-control" id="input3" placeholder="IMAX">
+						</div>
+						<div class="form-group">
+							<label for="input2" class="control-label">Description:</label>
+							<textarea id=”service-descr” class="form-control" placeholder="A technique of widescreen cinematography which produces an image approximately ten times larger than that from standard 35 mm film" rows="4"></textarea>
+						</div>
+					</div>
+					<div class="col-xs-12 no-padding-left no-padding-right">
+
+						<label for="" class="control-label">Small icon:</label>
+					</div>
+					<div class="col-sm-12 no-padding-left no-padding-right">
+						<div class="col-sm-2 no-padding-left no-padding-right">
+							<div class="upload-picture-frame"><i class="fa fa-picture-o"></i></div>     
+						</div>
+						<div class="col-sm-10">
+							<div class="col-sm-12 no-padding-left no-padding-right upload-picture-selected-file">
+								No file selected      
+							</div>
+							<div class="col-sm-12 no-padding-left no-padding-right upload-picture-suggestions">
+								JPG, JPEG, GIF, PNG (max size 2 MB)     
+							</div>
+							<div class="col-sm-12 no-padding-left no-padding-right">
+								<p class="view-all-experiences relative"><a href="#"><i class="fa fa-upload icon-separated"></i>Upload file</a></p> 
+							</div>
+						</div>     
+					</div>
+					<div class="col-xs-12 no-padding-left no-padding-right large-icon-margin">
+						<label for="" class="control-label">Large icon:</label>
+					</div>
+					<div class="col-sm-12 no-padding-left no-padding-right">
+						<div class="col-sm-2 no-padding-left no-padding-right">
+							<div class="upload-picture-frame"><img class="img-responsive" src="img/imax.png"></div>     
+						</div>
+						<div class="col-sm-10">
+							<div class="col-sm-12 no-padding-left no-padding-right upload-picture-selected-file">
+								imax.png      
+							</div>
+							<div class="col-sm-12 no-padding-left no-padding-right upload-picture-suggestions">
+								JPG, JPEG, GIF, PNG (max size 2 MB)     
+							</div>
+							<div class="col-sm-12 no-padding-left no-padding-right">
+								<p class="view-all-experiences relative"><a href="#"><i class="fa fa-times icon-separated"></i>Delete file</a></p> 
+							</div>
+						</div>     
+					</div>
+
+					<div class="col-sm-12 no-padding-left  margin-buttons-experiences">
+						<button type="submit" class="btn btn-sm btn-success">Save</button>
+						<button type="submit" class="btn btn-sm btn-success">Save &amp; Apply</button>
+						<button type="submit" class="btn btn-sm btn-default">Cancel</button>
+						<button type="submit" class="btn btn-sm btn-danger cancel-button"><i class="fa fa-times icon-separated"></i>Delete</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+</div>
+
+<!-- JavaScript
+================================================== -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+		e.stopPropagation();
+	});
+</script>
+<script src="js/angular.min.js"></script>
+<script src="js/ui-bootstrap-tpls-0.10.0.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

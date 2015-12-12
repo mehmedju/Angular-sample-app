@@ -1,0 +1,96 @@
+﻿<div class="modal-content modal-booking-font" style="width: 800px">
+    <div class="modal-header modal-header-booking">
+        <button type="button" class="close" data-ng-click="close()">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Booking</h4>
+    </div>
+    <div class="modal-body modal-body-booking modal-body-height">
+        <div class="col-sm-6 no-padding-left">
+            <div class="form-group">
+                <label for="inputAudName" class="control-label">Features:</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="inputAudName" placeholder="Start typing..." data-ng-model="insertedTag.name" data-enter-pressed="addFeature()" data-typeahead="feature as feature.name for feature in features | filter:{name:$viewValue}" data-typeahead-on-select='addFeature(feature, insertedTag)'><span class="input-group-btn">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default green-btn-booking" type="button" data-ng-click="openFeatureModal()" role="button"><i class="fa fa-plus"></i></button>
+                        </span></span>
+                </div>
+            </div>
+            <div data-ms-tags="tagsCollection"></div>
+        </div>
+        <div class="col-sm-6 no-padding-right">
+            <div class="col-sm-12 booking-right">
+                <h4 class="divider">Select sites</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Quick find...">
+                    <a href="" class="close clear-search hidden">&times;</a>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+                <!-- /input-group -->
+                <p><a href="">Select all</a> &middot; <a href="">Clear</a></p>
+                <div class="checkbox-left">
+                    <div class="checkbox-style">
+                        <input id="demo_box_2" class="css-checkbox" type="checkbox" checked="checked" />
+                        <label for="demo_box_2" name="demo_lbl_2" class="css-label">Alpharetta Theater</label>
+                    </div>
+                    <div class="checkbox-style">
+                        <input id="demo_box_3" class="css-checkbox" type="checkbox" checked="checked" />
+                        <label for="demo_box_3" name="demo_lbl_3" class="css-label">Buckhead Amphitheater</label>
+                    </div>
+                    <div class="checkbox-style">
+                        <input id="demo_box_4" class="css-checkbox" type="checkbox" />
+                        <label for="demo_box_4" name="demo_lbl_4" class="css-label">San Fierro Grand Hall</label>
+                    </div>
+                    <div class="checkbox-style">
+                        <input id="demo_box_5" class="css-checkbox" type="checkbox" checked="checked" />
+                        <label for="demo_box_5" name="demo_lbl_5" class="css-label">Alpharetta Theater</label>
+                    </div>
+                    <div class="checkbox-style">
+                        <input id="demo_box_6" class="css-checkbox" type="checkbox" checked="checked" />
+                        <label for="demo_box_6" name="demo_lbl_6" class="css-label">Buckhead Amphitheater</label>
+                    </div>
+                    <div class="checkbox-style">
+                        <input id="demo_box_7" class="css-checkbox" type="checkbox" />
+                        <label for="demo_box_7" name="demo_lbl_7" class="css-label">San Fierro Grand Hall</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-lg-6 no-padding-left">
+                <label class="control-label">Start date:</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="b" is-open="datepickers.openedStartDate" min-date="2013-06-22" max-date="'2025-06-22'" data-show-weeks="false" data-show-button-bar="false" required id="Text6" name="releaseModel" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" ng-click="openDatepicker($event,'openedStartDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-6 col-lg-6 no-padding-right">
+                <label class="control-label">End date:</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="a" is-open="datepickers.openedEndDate" min-date="2013-06-22" max-date="'2025-06-22'" data-show-weeks="false" data-show-button-bar="false" required id="Text7" name="releaseModel" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" data-ng-click="openDatepicker($event,'openedEndDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-12 col-xs-12 col-sm-12  margin-top-terms">
+                <div class="form-group">
+                    <label for="input4" class="control-label">Booking Terms:</label>
+                    <select class="form-control">
+                        <option>All</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" data-ng-click="close()">Cancel</button>
+        <button type="button" class="btn btn-primary">Book</button>
+    </div>
+
+</div>

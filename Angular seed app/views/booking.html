@@ -1,0 +1,271 @@
+﻿<div class="booking">
+    <div class="container-fluid" data-ng-controller="bookingCtrl">
+        <div class="row no-margin">
+            <div class="col-md-9 main">
+                <h2 class="sub-header">{{'Booking.title' | translate}}</h2>
+                <div class="row">
+                    <div class="col-md-12 table-header-form">
+                        <div class="col-sm-6 no-padding-left">
+                            <div class="input-group has-feedback">
+                                <input id="searchFeature" type="text" class="form-control" placeholder="Search features..." data-ng-model="searchFilter" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 table-header-form">
+                        <a href="" class="btn btn-success pull-right" role="button" data-ng-click="openBookingModal()">
+                            <i class="fa fa-plus icon-separated"></i>{{'AddNew.Button' | translate}}
+                        </a>
+                        <form class="form-inline form-horizontal demo" role="form">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-5 control-label no-padding-l">{{'StartDate.Label.Filter' | translate}}:</label>
+                                <div class="col-sm-4 no-padding-l">
+                                    <select data-ng-model="filters.start_date" data-ng-options="start_date | date: 'MMM, d yyyy' for start_date in moviesTable | unique: 'start_date' "
+                                        class="form-control" data-ng-change="selectByFilterItem(filters, 'start_date')" style="margin-right: 30px">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-5 control-label" style="margin-left: 20px">{{'EndDate.Label.Filter' | translate}}:</label>
+                                <div class="col-sm-5 no-padding-l">
+                                    <select data-ng-model="filters.end_date" data-ng-options="end_date | date: 'MMM, d yyyy' for end_date  in moviesTable | unique: 'end_date'"
+                                        class="form-control" data-ng-change="selectByFilterItem(filters, 'end_date')">
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-default" data-ng-click="clearFilters()" style="margin-left: 45px">
+                                {{'ClearFilters.Button' | translate}}
+                            </button>
+                            <a href="" data-ng-click="changeLanguage('en-us')">
+                                <img src="../app/img/united-states.png" style="margin-left: 30px"></a>
+                            <a href="" data-ng-click="changeLanguage('en-ca')">
+                                <img src="../app/img/canada.png" style="margin-left: 5px"></a>
+                        </form>
+
+                    </div>
+                </div>
+
+                <!--Features table-->
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>{{'Sign.Label' | translate}}</th>
+                                <th data-ms-filter-by-column="feature" data-table-source="moviesTable" data-clear-filters="clearColumnFilters"
+                                    data-custom-filtering="tableFilter(tableItem)">
+                                    <span translate="Feature.Label"></span>
+                                </th>
+                                <th data-ms-filter-by-column="studio.name" data-table-source="moviesTable" data-clear-filters="clearColumnFilters"
+                                    data-custom-filtering="tableFilter(tableItem)">
+                                    <span translate="Studio.Label"></span>
+                                </th>
+                                <th data-ms-filter-by-column="release_date" data-table-source="moviesTable" data-clear-filters="clearColumnFilters"
+                                    data-transform-function="formatDateFilter(item)" 
+                                    data-custom-filtering="tableFilter(tableItem)">{{'ReleaseDate.Label' | translate}}
+                                </th>
+                                <th>{{'Rating.Label' | translate}}</th>
+                                <th data-ms-filter-by-column="sites" data-table-source="moviesTable" data-clear-filters="clearColumnFilters"
+                                    data-transform-function="formatSiteFilter(item)" 
+                                    data-custom-filtering="tableFilter(tableItem)">
+                                    <span translate="Site.Label"></span>
+                                </th>
+                                <th>{{'StartDate.Label' | translate}}</th>
+                                <th>{{'EndDate.Label' | translate}}</th>
+                                <th>{{'Booking.Label' | translate}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="item in moviesTable | filter: {omit: '!true'} | filter: tableFilter" data-ng-click="newEditTemplate(item,$index)" data-ng-class=" {selected : contentOfSelectedRow.id==item.id}">
+                                <td>{{item.id}}
+                                </td>
+                                <td>{{item.feature}}
+                                </td>
+                                <td>{{item.studio.name}}
+                                </td>
+                                <td>{{item.release_date | date: 'MMM, d yyyy'}}
+                                </td>
+                                <td>{{item.rating}}
+                                </td>
+                                <td>{{item.sites}}
+                                </td>
+                                <td>{{item.start_date | date: 'MMM, d yyyy'}}
+                                </td>
+                                <td>{{item.end_date | date: 'MMM, d yyyy'}}
+                                </td>
+                                <td>{{item.booking_terms}}
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!--Add new booking-->
+            <div class="col-md-3 movie-details main" data-ng-controller="newBookingController" data-ng-show="isTemplateFormVisible">
+                <h2 class="sub-header" data-ng-if="newBookingAddMode">{{'AddNew.Title' | translate}}</h2>
+                <h2 class="sub-header" data-ng-if="!newBookingAddMode">{{'Edit.Title' | translate}}</h2>
+                <div class="well details clearfix">
+
+                    <div class="col-lg-12 col-md-12">
+                        <form class="form-horizontal" role="form" name="addForm" id="addForm" novalidate="">
+
+                            <!-- features -->
+                            <div class="form-group">
+                                <label for="input1" class="col-sm-2 control-label">{{'AddNew.Feature' | translate}}:</label>
+                                <div class="col-sm-9 col-sm-offset-1" data-ng-if="newBookingAddMode">
+                                    <select data-ng-model="newBooking.feature" data-ng-options="c.name for c in featuremodels" class="form-control"
+                                        id="featureModel" name="featureModel" required>
+                                        <option value="">--{{'AddNew.ChooseFeature' | translate}}--</option>
+                                    </select>
+                                    <div class="errors">
+                                        <ul data-ng-show="addForm.submitted">
+                                            <li data-ng-show="addForm.featureModel.$error.required">{{'AddNew.RequiredFeature' | translate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9 col-sm-offset-1" data-ng-if="!newBookingAddMode">
+                                    <label for="input1" style="padding-top: 7px">{{newBooking.feature}}</label>
+                                </div>
+                            </div>
+
+                            <!-- studio -->
+                            <div class="form-group">
+                                <label for="input2" class="col-sm-2 control-label">{{'AddNew.Studio' | translate}}:</label>
+                                <div class="col-sm-9 col-sm-offset-1" data-ng-if="newBookingAddMode">
+                                    <select data-ng-model="newBooking.studio" data-ng-options="s.name for s in studios" class="form-control"
+                                        id="studioModel" name="studioModel" required>
+                                        <option value="">-- {{'AddNew.ChooseStudio' | translate}} --</option>
+                                    </select>
+                                    <div class="errors">
+                                        <ul data-ng-show="addForm.submitted">
+                                            <li data-ng-show="addForm.studioModel.$error.required">{{'AddNew.RequiredStudio' | translate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9 col-sm-offset-1" data-ng-if="!newBookingAddMode">
+                                    <label for="input1" style="padding-top: 7px">{{newBooking.studio.name}}</label>
+                                </div>
+                            </div>
+
+                            <!-- release date -->
+                            <div class="form-group">
+                                <label for="input3" class="col-sm-2 control-label">{{'AddNew.ReleaseDate' | translate}}:</label>
+                                <div class="col-sm-9 col-sm-offset-1">
+                                    <p class="input-group">
+                                        <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="newBooking.releaseDate" is-open="datepickers.openedReleaseDate"
+                                            min-date="2013-06-22" max-date="'2025-06-22'" data-show-button-bar="false" required id="releaseModel" name="releaseModel" data-datepicker-options="datePickerOptions" />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" data-ng-click="showDatepicker($event, 'openedReleaseDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </p>
+                                    <div class="errors">
+                                        <ul data-ng-show="addForm.submitted">
+                                            <li data-ng-show="addForm.releaseModel.$error.required">{{'AddNew.RequiredReleaseDate' | translate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- rating -->
+                            <div class="form-group">
+                                <label for="ratingModel" class="col-sm-2 control-label">{{'AddNew.Rating' | translate}}:</label>
+                                <div class="col-sm-5 col-sm-offset-1">
+                                    <select data-ng-model="newBooking.rating" data-ng-options="s.name as s.name for s in ratings" class="form-control"
+                                        id="ratingModel" name="ratingModel" required>
+                                        <option value="">--{{'AddNew.ChooseRating' | translate}}--</option>
+                                    </select>
+                                    <div class="errors">
+                                        <ul data-ng-show="addForm.submitted">
+                                            <li data-ng-show="addForm.ratingModel.$error.required">{{'AddNew.RequiredRating' | translate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- site -->
+                            <div class="form-group">
+                                <label for="input5" class="col-sm-2 control-label">{{'AddNew.Site' | translate}}:</label>
+                                <div class="col-sm-9 col-sm-offset-1">
+                                    <input type='text' data-ng-model='newBooking.site' class="form-control" placeholder="{{'AddNew.PlaceholderSite' | translate}}"
+                                        id="site" name="site" required />
+                                    <div class="errors">
+                                        <ul data-ng-show="addForm.submitted">
+                                            <li data-ng-show="addForm.site.$error.required">{{'AddNew.RequiredSite' | translate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- start date -->
+                            <div class="form-group">
+                                <label for="input6" class="col-sm-2 control-label">{{'AddNew.StartDate' | translate}}:</label>
+                                <div class="col-sm-9 col-sm-offset-1">
+                                    <p class="input-group">
+                                        <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="newBooking.startDate" is-open="datepickers.openedStartDate"
+                                            min-date="2013-06-22" max-date="'2025-06-22'" id="startModel" name="startModel" data-show-button-bar="false" required data-datepicker-options="datePickerOptions" />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" data-ng-click="showDatepicker($event, 'openedStartDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </p>
+                                    <div class="errors">
+                                        <ul data-ng-show="addForm.submitted">
+                                            <li data-ng-show="addForm.startModel.$error.required">{{'AddNew.RequiredStartDate' | translate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- end date -->
+                            <div class="form-group">
+                                <label for="input7" class="col-sm-2 control-label">{{'AddNew.EndDate' | translate}}:</label>
+                                <div class="col-sm-9 col-sm-offset-1">
+                                    <p class="input-group">
+                                        <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="newBooking.endDate" is-open="datepickers.openedEndDate"
+                                            min-date="2013-06-22" max-date="'2025-06-22'" id="endModel" data-show-button-bar="false" name="endModel" required data-datepicker-options="datePickerOptions" />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" data-ng-click="showDatepicker($event, 'openedEndDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </p>
+                                    <div class="errors">
+                                        <ul data-ng-show="addForm.submitted">
+                                            <li data-ng-show="addForm.endModel.$error.required">{{'AddNew.RequiredEndDate' | translate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- booking terms -->
+                            <div class="form-group">
+                                <label for="input4" class="col-sm-2 control-label">{{'AddNew.BookingTerms' | translate}}:</label>
+                                <div class="col-sm-5 col-sm-offset-1">
+                                    <input type='text' class="form-control" data-ng-model='newBooking.booking' placeholder="{{'AddNew.PlaceholderBookingTerms' | translate}}"
+                                        id="bookingTerms" name="bookingTerms" required />
+                                    <div class="errors">
+                                        <ul data-ng-show="addForm.submitted">
+                                            <li data-ng-show="addForm.bookingTerms.$error.required">{{'AddNew.RequiredBookingTerms' | translate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group last" data-ng-if="newBookingAddMode">
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn btn-success" data-ng-click="book(true)">{{'Book.Button' | translate}}</button>
+                                    <button type="submit" class="btn btn-default" data-ng-click="book(false)">{{'BookNew.Button' | translate}}</button>
+                                    <button type="submit" class="btn btn-default pull-right" data-ng-click="reset()">{{'Cancel.Button' | translate}}</button>
+                                </div>
+                            </div>
+                            <div class="form-group last" data-ng-if="!newBookingAddMode">
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn btn-success" data-ng-click="save()">{{'Save.Button' | translate}}</button>
+                                    <button type="submit" class="btn btn-default pull-right" data-ng-click="reset()">{{'Cancel.Button' | translate}}</button>
+                                    <button type="submit" class="btn btn-default pull-right" data-ng-click="delete()">{{'Delete.Button' | translate}}</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

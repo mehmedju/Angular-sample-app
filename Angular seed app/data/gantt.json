@@ -1,0 +1,346 @@
+﻿[
+    {
+        "id": "b8d10927-cf50-48bd-a056-3554decab824",
+        "description": "Auditorium 2",
+        "order": 1,
+        "tasks": [
+                {
+                "id": "0fbf344a-cb43-4b20-8003-a789ba803ad8",
+                "subject": "300",
+                "from": "2013-10-22T23:05:00.000Z",
+                "to": "2013-10-23T01:00:00.000Z",
+                "data": {
+                    "duration": "115",
+                    "image": "../mockups/img/posters/300.jpg",
+                    "rating": "R",
+                    "modifiers": [
+                        {
+                            "name": "D-Box",
+							"icon":"../app/img/experiences/dbox.png"
+                        },
+                        {
+                            "name": "Imax",
+							"icon":"../app/img/experiences/imax.png"
+                        },
+                        {
+                            "name": "Thx",
+							"icon":"../app/img/experiences/thx.png"
+                        },
+                        {
+                            "name": "3D",
+							"icon":"../app/img/experiences/3d.png"
+                        },
+                        {
+                            "name": "5D",
+							"icon":"../app/img/experiences/5d.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "12af138c-ba21-4159-99b9-06d61b1299a2",
+                "subject": "Lego Movie",
+                "from": "2013-10-22T15:05:56.549Z",
+                "to": "2013-10-22T17:05:56.549Z",
+                "data": {
+                    "duration": "120",
+                    "image": "../mockups/img/posters/legomovie.jpg",
+                    "rating": "PG-13",
+                    "modifiers": [
+                        {
+                            "name": "Imax",
+							"icon":"../app/img/experiences/imax.png"
+                        },
+                        {
+                            "name": "Thx",
+							"icon":"../app/img/experiences/thx.png"
+                        },
+                        {
+                            "name": "3D",
+							"icon":"../app/img/experiences/3d.png"
+                        },
+                        {
+                            "name": "4D",
+							"icon":"../app/img/experiences/4d.png"
+                        },
+                        {
+                            "name": "CC",
+							"icon":"../app/img/experiences/cc.png"
+                        },
+                        {
+                            "name": "5D",
+							"icon":"../app/img/experiences/5d.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "73294eca-de4c-4f35-aa9b-ae25481067ba",
+                "subject": "Mr. Peabody & Sherman",
+                "from": "2013-10-22T17:25:00.000Z",
+                "to": "2013-10-22T19:45:00.000Z",
+                "data": {
+                    "duration": "140",
+                    "image": "../mockups/img/posters/mrpeabodyandsherman.jpg",
+                    "rating": "R",
+                    "modifiers": [
+                        {
+                            "name": "D-Box",
+							"icon":"../app/img/experiences/dbox.png"
+                        },
+                        {
+                            "name": "Imax",
+							"icon":"../app/img/experiences/imax.png"
+                        },
+                        {
+                            "name": "Thx",
+							"icon":"../app/img/experiences/thx.png"
+                        },
+                        {
+                            "name": "3D",
+							"icon":"../app/img/experiences/3d.png"
+                        },
+                        {
+                            "name": "4D",
+							"icon":"../app/img/experiences/4d.png"
+                        },
+                        {
+                            "name": "5D",
+							"icon":"../app/img/experiences/5d.png"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "c65c2672-445d-4297-a7f2-30de241b3145",
+        "description": "Auditorium 3",
+        "order": 2,
+        "tasks": [
+            {
+                "id": "4e197e4d-02a4-490e-b920-4881c3ba8eb7",
+                "subject": "Pompeii",
+                "from": "2013-10-22T15:45:00.000Z",
+                "to": "2013-10-22T17:35:00.000Z",
+                "data": {
+                    "duration": "110",
+                    "image": "../mockups/img/posters/pompeii.jpg",
+                    "rating": "R",
+                    "modifiers": [
+                        {
+                            "name": "D-Box",
+							"icon":"../app/img/experiences/dbox.png"
+                        },
+                        {
+                            "name": "Imax",
+							"icon":"../app/img/experiences/imax.png"
+                        },
+                        {
+                            "name": "3D",
+							"icon":"../app/img/experiences/3d.png"
+                        },
+                        {
+                            "name": "4D",
+							"icon":"../app/img/experiences/4d.png"
+                        },
+                        {
+                            "name": "CC",
+							"icon":"../app/img/experiences/cc.png"
+                        },
+                        {
+                            "name": "5D",
+							"icon":"../app/img/experiences/5d.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "451046c0-9b17-4eaf-aee0-4e17fcfce6ae",
+                "subject": "Gravity",
+                "from": "2013-10-22T11:00:00.000Z",
+                "to": "2013-10-22T13:05:00.000Z",
+                "data": {
+                    "duration": "125",
+                    "image": "../mockups/img/posters/gravity.jpg",
+                    "rating": "R",
+                    "modifiers": [
+                        {
+                            "name": "D-Box",
+							"icon":"../app/img/experiences/dbox.png"
+                        },
+                        {
+                            "name": "Imax",
+							"icon":"../app/img/experiences/imax.png"
+                        },
+                        {
+                            "name": "Thx",
+							"icon":"../app/img/experiences/thx.png"
+                        },
+                        {
+                            "name": "3D",
+							"icon":"../app/img/experiences/3d.png"
+                        },
+                        {
+                            "name": "4D",
+							"icon":"../app/img/experiences/4d.png"
+                        },
+                        {
+                            "name": "CC",
+							"icon":"../app/img/experiences/cc.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "fcc568c5-53b0-4046-8f19-265ebab34c0b",
+                "subject": "Non-Stop",
+                "from": "2013-10-22T18:05:00.000Z",
+                "to": "2013-10-22T19:55:00.000Z",
+                "data": {
+                    "duration": "110",
+                    "image": "../mockups/img/posters/nonstop.jpg",
+                    "rating": "PG-13",
+                    "modifiers": [
+                        {
+                            "name": "3D",
+							"icon":"../app/img/experiences/3d.png"
+                        },
+                        {
+                            "name": "Imax",
+							"icon":"../app/img/experiences/imax.png"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "dd2e7a97-1622-4521-a807-f29960218785",
+        "description": "Auditorium 4",
+        "order": 3,
+        "tasks": [
+            {
+                "id": "9c17a6c8-ce8c-4426-8693-a0965ff0fe69",
+                "subject": "3 Days to Kill",
+                "from": "2013-10-22T17:05:00.000Z",
+                "to": "2013-10-22T18:55:00.000Z",
+                "data": {
+                    "duration": "110",
+                    "image": "../mockups/img/posters/3daystokill.jpg",
+                    "rating": "PG-13",
+                    "modifiers": [
+                        {
+                            "name": "D-Box",
+							"icon":"../app/img/experiences/dbox.png"
+                        },
+                        {
+                            "name": "Imax",
+							"icon":"../app/img/experiences/imax.png"
+                        },
+                        {
+                            "name": "Thx",
+							"icon":"../app/img/experiences/thx.png"
+                        },
+                        {
+                            "name": "3D",
+							"icon":"../app/img/experiences/3d.png"
+                        },
+                        {
+                            "name": "CC",
+							"icon":"../app/img/experiences/cc.png"
+                        },
+                        {
+                            "name": "5D",
+							"icon":"../app/img/experiences/5d.png"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "dd2e7a97-1622-4521-a807-f299602187856",
+        "description": "Auditorium 5",
+        "order": 4,
+        "tasks": [
+            {
+                "id": "9c17a6c8-ce8c-4426-8693-a0965ff0fe69AA5A",
+                "subject": "Blood Ties",
+                "from": "2013-10-22T19:30:00.000Z",
+                "to": "2013-10-22T22:10:00.000Z",
+                "data": {
+                    "duration": "160",
+                    "image": "../mockups/img/posters/bloodties.jpg",
+                    "rating": "R",
+                    "modifiers": [
+                        {
+                            "name": "D-Box",
+							"icon":"../app/img/experiences/dbox.png"
+                        },
+                        {
+                            "name": "Imax",
+							"icon":"../app/img/experiences/imax.png"
+                        },
+                        {
+                            "name": "Thx",
+							"icon":"../app/img/experiences/thx.png"
+                        },
+                        {
+                            "name": "3D",
+							"icon":"../app/img/experiences/3d.png"
+                        },
+                        {
+                            "name": "4D",
+							"icon":"../app/img/experiences/4d.png"
+                        },
+                        {
+                            "name": "5D",
+							"icon":"../app/img/experiences/5d.png"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": "dd2e7a97-1622-4521-a807-f2996021878568",
+        "description": "Auditorium 6",
+        "order": 5,
+        "tasks": [
+            {
+                "id": "9c17a6c8-ce8c-4426-8693-a0965ff0fe69AA5A8",
+                "subject": "Muppets Most Wanted",
+                "from": "2013-10-22T18:00:00.000Z",
+                "to": "2013-10-22T20:00:00.000Z",
+                "data": {
+                    "duration": "120",
+                    "image": "../mockups/img/posters/muppetsmostwanted.jpg",
+                    "rating": "PG-13",
+                    "modifiers": [
+                        {
+                            "name": "D-Box",
+							"icon":"../app/img/experiences/dbox.png"
+                        },
+                        {
+                            "name": "Imax",
+							"icon":"../app/img/experiences/imax.png"
+                        },
+                        {
+                            "name": "4D",
+							"icon":"../app/img/experiences/4d.png"
+                        },
+                        {
+                            "name": "CC",
+							"icon":"../app/img/experiences/cc.png"
+                        },
+                        {
+                            "name": "5D",
+							"icon":"../app/img/experiences/5d.png"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]

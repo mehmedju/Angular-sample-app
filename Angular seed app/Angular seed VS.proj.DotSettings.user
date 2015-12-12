@@ -1,0 +1,2 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=app_005Cpackages_005Cangularjs_002E1_002E2_002E14_005Ccontent_005CScripts_005Cangular_002Emin_002Ejs/@EntryIndexedValue">app\packages\angularjs.1.2.14\content\Scripts\angular.min.js</s:String></wpf:ResourceDictionary>

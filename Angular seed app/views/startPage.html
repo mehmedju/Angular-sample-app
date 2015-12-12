@@ -1,0 +1,56 @@
+﻿<div class="jumbotron splash" data-ng-controller="startPageController">
+    <div class="container text-center">
+        <h1>CinéCentral</h1>
+        <h3>Cinema management systems made easy.</h3>
+        <p><a class="btn btn-ncr btn-lg" role="button" href="#/view2">Sign up</a><a class="btn btn-ncr white btn-lg" role="button" href="#/view2">Learn more</a></p>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div data-ng-controller="startPageController">
+                    <div style="height: 200px">
+                        <div data-carousel="" data-interval="3000">
+                            <div data-slide="" data-ng-repeat="slide in slideContent" data-active="slide.active">
+                                <p class="carousel-caption">
+                                    <h2>{{slide.title}}</h2>
+                                    <br />
+                                    <p>{{slide.description}}</p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container promo">
+    <div class="row text-center">
+        <div class="col-md-3">
+            <img src="img/check.png" />
+            <h2>Intuitive </h2>
+            <p>Everything about CinéCentral is simple and intuitive without the need for elaborate user training.</p>
+        </div>
+        <div class="col-md-3">
+            <img src="img/check.png" />
+            <h2>Fast</h2>
+            <p>Forget about clunky, slow websites. CinéCentral gives you the feeling of using a desktop application, but runs off of a private cloud environment.</p>
+        </div>
+        <div class="col-md-3">
+            <img src="img/check.png" />
+            <h2>Safe</h2>
+            <p>All of your data is secured safely on the cloud and users are restricted to seeing just the data that they have access to.</p>
+        </div>
+        <div class="col-md-3">
+            <img src="img/check.png" />
+            <h2>Intelligent</h2>
+            <p>CinéCentral isn’t just a portal for you to enter your data; it’s your partner in allowing you to manage your site better by doing most of the heavy lifting for you automatically.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; NCR 2014</p>
+    </footer>
+</div>
+

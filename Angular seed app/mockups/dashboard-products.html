@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>NCR CineCenral - Products</title>
+    
+
+    <!-- CSS -->
+    <link href="../app/css/msApp.min.css" rel="stylesheet">
+    <link href="../app/css/font-awesome.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="tickets">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img class="img-responsive img-inline" src="img/logo-green.png" style="position:relative; top:-2px; opacity:0.5" />NCR CinéCentral</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="dashboard-feature.html">Sites</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Films <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="dashboard-feature.html">Add a Feature</a></li>
+                <li><a href="dashboard-feature.html">Book a Feature</a></li>
+                <li><a href="dashboard-feature.html">Schedule a Feature</a></li>
+                <li><a href="dashboard-feature.html">Manage tickets</a></li>
+                <li class="divider"></li>
+                <li><a href="dashboard-feature.html">Help</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="dashboard-feature.html">Products</a></li>
+            <li><a href="dashboard-feature.html">Revenue Audit</a></li>
+            <li><a href="dashboard-feature.html">Promotions</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="#"><i class="fa fa-dot-circle-o brand icon-separated"></i>Signed in as John Smith</a></li> -->
+            <li><a href="index.html"><i class="fa fa-sign-out"></i> Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row no-margin">
+        <div class="col-md-8 main">
+          
+          <h2 class="sub-header">Manage products</h2>
+
+          <div class="row constrain">
+            <div class="col-md-12 table-header-form">
+
+              <a class="btn btn-success pull-right disabled" href="#" role="button"><i class="fa fa-plus"></i> Add new</a>
+
+              <div class="col-sm-6 no-padding-left">
+                <div class="input-group has-feedback">
+                  <input type="text" class="form-control" placeholder="Search products...">
+                  <a href="#" class="close clear-search hidden">&times;</a>
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                  </span>
+                </div><!-- /input-group -->
+              </div>
+
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>
+                    
+                    <div class="dropdown display-inline">
+                      <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa  fa-chevron-circle-down"></i></a>
+                      <ul class="dropdown-menu filter" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-asc icon-separated"></i>Sort A - Z</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-desc icon-separated"></i>Sort Z - A</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation" class="filter-search">
+                          <p>Filter &middot; <a href="#">Select all</a> &middot; <a href="#">Clear</a></p>                        
+                          <input type="text" class="form-control input-sm" placeholder="Search...">
+                          <div class="filter-options">
+                            <ul>
+                              <li class="active">Popcorn Small</li>
+                              <li class="active">Popcorn Large</li>
+                              <li>Skittles</li>
+                              <li>Skittles Sour</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li class="filter-confirmation">
+                          <button type="button" class="btn btn-success btn-sm">OK</button>
+                          <button type="button" class="btn btn-default btn-sm">Cancel</button>
+                        </li>
+                      </ul>
+                    </div>
+                      Product
+                  </th>
+                  <th>
+                    <div class="dropdown display-inline">
+                      <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                    </div>
+                    Current Price
+                  </th>
+                  <th>
+                    <div class="dropdown display-inline">
+                      <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                    </div>
+                    Current Price Effective Date
+                  </th>
+                  <th>
+                    <div class="dropdown display-inline">
+                      <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                    </div>
+                    Future Price
+                  </th>
+                  <th>
+                    <div class="dropdown display-inline">
+                      <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                    </div>
+                    Future Price Effective Date
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Popcorn</td>
+                  <td>$10.99</td>
+                  <td>Jan 20 2014</td>
+                  <td>$12.99</td>
+                  <td>Jun 20 2014</td>
+                </tr>
+                <tr>
+                  <td>Popcorn Small</td>
+                  <td>$8.99</td>
+                  <td>Jan 20 2014</td>
+                  <td>$8.99</td>
+                  <td>Aug 12 2014</td>
+                </tr>
+                <tr>
+                  <td>Skittles</td>
+                  <td>$8.99</td>
+                  <td>Jan 20 2014</td>
+                  <td>$9.99</td>
+                  <td>Aug 12 2014</td>
+                </tr>
+                <tr>
+                  <td>Skittles Sour</td>
+                  <td>$5.99</td>
+                  <td>Jan 20 2014</td>
+                  <td>$6.99</td>
+                  <td>Sep 21 2014</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-md-4 movie-details main">
+          <h2 class="sub-header">Edit product</h2>
+          <div class="well details clearfix">
+              
+                <form role="form">
+                  <div class="form-group">
+                    <label for="input1" class="control-label">Name:</label>
+                    <input type="text" class="form-control" id="input1" placeholder="Popcorn">
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-xs-6">
+                        <label for="input3" class="control-label">Current Price:</label>
+                        <input type="text" class="form-control" id="input2" placeholder="$10.99">
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <label for="input3" class="control-label">Effective Date:</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="5/13/2014" disabled>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default disabled"><i class="glyphicon glyphicon-calendar"></i></button>
+                          </span>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-xs-6">
+                        <label for="input3" class="control-label">Future Price:</label>
+                        <input type="text" class="form-control" id="input2" placeholder="">
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <label for="input3" class="control-label">Effective Date:</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Choose..." />
+                          <span class="input-group-btn">
+                            <button class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
+                          </span>
+                        </div>
+                    </div>
+                  </div>
+                                          <div class="row">
+                    <div class="form-group col-xs-3">
+                    <div class="checkbox-style-right">
+                     <div class="checkbox-label-left"><label for="demo_box_7" name="demo_lbl_7" class="checkbox-label-left">Taxable</label></div>
+					<input id="demo_box_7" class="css-checkbox" type="checkbox" />
+					<label for="demo_box_7" name="demo_lbl_7" class="css-label"></label>
+                      </div>
+                      </div>
+                     </div>
+                  <div class="form-group last relative">
+                      <button type="submit" class="btn btn-sm btn-success">Save</button>
+                      <button type="submit" class="btn btn-sm btn-success">Save &amp; New</button>
+                      <button type="submit" class="btn btn-sm btn-default">Cancel</button>
+                      <button type="submit" class="btn btn-sm btn-danger cancel-button"><i class="fa fa-times icon-separated"></i>Delete</button>
+                  </div>
+                </form>
+                
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <!-- JavaScript
+    ================================================== -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+        e.stopPropagation();
+    });
+    </script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.10.0.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </body>
+</html>

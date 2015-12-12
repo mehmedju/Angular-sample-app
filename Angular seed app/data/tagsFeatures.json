@@ -1,0 +1,136 @@
+﻿               [{
+                   "id": 1,
+                   "name": "300",
+				   "description":"100 min · Jun 6, 2014 · PG-13",
+				   "poster":"../mockups/img/posters/300.jpg"
+                   
+               },
+               {
+                   "id": 2,
+                   "name": "3 Days to Kill",
+				   "description":"120 min · May 8, 2014 · PG-13",
+				   "poster":"../mockups/img/posters/3daystokill.jpg"
+
+               },
+               {
+                    "id": 3,
+                   "name": "Blood Ties",
+				   "description":"96 min · Apr 18, 2014 · R",
+				   "poster":"../mockups/img/posters/bloodties.jpg"
+
+               },
+                {
+                     "id": 4,
+                   "name": "Breathe In",
+				   "description":"108 min · May 20, 2014 · PG-13",
+				   "poster":"../mockups/img/posters/breathein.jpg"
+
+                },
+                {
+                     "id": 5,
+                   "name": "Captain America: The Winter Soldier",
+				   "description":"110 min · Jun 6, 2014 · PG-13",
+				   "poster":"../mockups/img/posters/captainamericawintersoldier.jpg"
+
+                },
+                {
+                     "id": 6,
+                   "name": "Cheap Thrills ",
+				   "description":"100 min · Jun 1, 2014 · R",
+				   "poster":"../mockups/img/posters/cheapthrills.jpg"
+
+                },
+                {
+                     "id": 7,
+                   "name": "Divergent",
+				   "description":"139 min · Apr 21, 2014 · R",
+				   "poster":"../mockups/img/posters/divergent.jpg"
+
+                },
+                {
+                     "id": 8,
+                   "name": "The Grand Budapest Hotel",
+				   "description":"107 min · Jun 11, 2014 · PG-13",
+				   "poster":"../mockups/img/posters/grandbudapesthotel.jpg"
+
+                },
+                {
+                     "id": 9,
+                   "name": "Gravity",
+				   "description":"98 min · May 26, 2014 · R",
+				   "poster":"../mockups/img/posters/gravity.jpg"
+
+                },
+                {
+                     "id": 10,
+                   "name": "The Lego Movie",
+				   "description":"128 min · May 11, 2014 · R",
+				   "poster":"../mockups/img/posters/legomovie.jpg"
+
+                },
+                {
+                     "id": 11,
+                   "name": "Mistaken for Strangers",
+				   "description":"101 min · Jun 2, 2014 · PG-13",
+				   "poster":"../mockups/img/posters/mistakenforstrangers.png"
+
+                },
+                {
+                     "id": 12,
+                   "name": "Mr. Peabody & Sherman",
+				   "description":"146 min · May 15, 2014 · R",
+				   "poster":"../mockups/img/posters/mrpeabodyandsherman.jpg"
+
+                },
+                {
+                     "id": 13,
+                   "name": "Muppets Most Wanted",
+				   "description":"121 min · Jun 9, 2014 · PG-13",
+				   "poster":"../mockups/img/posters/muppetsmostwanted.jpg"
+
+                },
+                {
+                     "id": 14,
+                   "name": "Non-Stop",
+				   "description":"130 min · Apr 30, 2014 · PG-13",
+				   "poster":"../mockups/img/posters/nonstop.jpg"
+
+                },
+                {
+                     "id": 15,
+                   "name": "Pompeii",
+				   "description":"124 min · May 11, 2014 · R",
+				   "poster":"../mockups/img/posters/pompeii.jpg"
+
+                },
+                {
+                     "id": 16,
+                   "name": "Robocop",
+				   "description":"138 min · Apr 25, 2014 · PG-13",
+				   "poster":"../mockups/img/posters/robocop.jpg"
+
+                },
+                {
+                     "id": 17,
+                   "name": "Sabotage",
+				   "description":"133 min · May 18, 2014 · PG-13",
+				   "poster":"../mockups/img/posters/sabotage.jpg"
+
+                },
+                {
+                     "id": 18,
+                   "name": "Spider-Man 2",
+				   "description":"111 min · Jun 2, 2014 · R",
+				   "poster":"../mockups/img/posters/spiderman2.jpg"
+
+                },
+                {
+                     "id": 19,
+                   "name": "Veronica Mars",
+				   "description":"97 min · May 16, 2014 · R",
+				   "poster":"../mockups/img/posters/veronicamars.jpg"
+
+                }
+               
+               
+           ]

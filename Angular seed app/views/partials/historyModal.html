@@ -1,0 +1,142 @@
+﻿<!-- Modal history -->
+<div class="modal-content modal-pricing-font">
+    <div class="modal-header modal-header-pricing">
+        <button type="button" class="close" aria-hidden="true" data-ng-click="close()">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Pricing history</h4>
+    </div>
+    <div class="modal-body modal-body-height">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="input3" class="control-label">Price:</label>
+                    <input type="text" class="form-control" id="input1" placeholder="Price">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">Effective from:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Select date" />
+                        <!--<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" show-button-bar="false" close-on-date-selection="false" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Select date" />-->
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">Effective to:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Select date" />
+                        <!--<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Select date" />-->
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form role="form">
+            <div class="col-md-12 no-padding-left">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+
+                                    <div class="dropdown display-inline">
+                                        <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                                        <ul class="dropdown-menu filter" role="menu" aria-labelledby="dropdownMenu1">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-asc icon-separated"></i>Sort A - Z</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-desc icon-separated"></i>Sort Z - A</a></li>
+                                            <li role="presentation" class="divider"></li>
+                                            <li role="presentation" class="filter-search">
+                                                <p>Filter &middot; <a href="#">Select all</a> &middot; <a href="#">Clear</a></p>
+                                                <input type="text" class="form-control input-sm" placeholder="Search...">
+                                                <div class="filter-options">
+                                                    <ul>
+                                                        <li class="active">Something</li>
+                                                        <li class="active">Something</li>
+                                                        <li>Something</li>
+                                                        <li>Something</li>
+                                                        <li>Something</li>
+                                                        <li>Something</li>
+                                                        <li>Something</li>
+                                                        <li>Something</li>
+                                                        <li>Something</li>
+                                                        <li>Something</li>
+                                                        <li>Something</li>
+                                                        <li>Something</li>
+                                                        <li>Something</li>
+                                                        <li>Something</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li role="presentation" class="divider"></li>
+                                            <li class="filter-confirmation">
+                                                <button type="button" class="btn btn-success btn-sm">OK</button>
+                                                <button type="button" class="btn btn-default btn-sm">Cancel</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    Ticket Type
+                                </th>
+                                <th>
+                                    <div class="dropdown display-inline">
+                                        <a href="" class="btn btn-filter dropdown-toggle" type="button" id="A1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                                    </div>
+                                    Price
+                                </th>
+                                <th>
+                                    <div class="dropdown display-inline">
+                                        <a href="" class="btn btn-filter dropdown-toggle" type="button" id="A2" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                                    </div>
+                                    Effective from Date
+                                </th>
+                                <th>
+                                    <div class="dropdown display-inline">
+                                        <a href="" class="btn btn-filter dropdown-toggle" type="button" id="A3" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                                    </div>
+                                    Effective to Date
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ticketType.name}}</td>
+                                <td>$10.99</td>
+                                <td>Jan 20 2014</td>
+                                <td>Jun 22 2014</td>
+                            </tr>
+                            <tr>
+                                <td>{{ticketType.name}}</td>
+                                <td>$8.99</td>
+                                <td>Jan 20 2014</td>
+                                <td>Aug 12 2014</td>
+                            </tr>
+                            <tr>
+                                <td>{{ticketType.name}}</td>
+                                <td>$8.99</td>
+                                <td>Jan 20 2014</td>
+                                <td>Aug 12 2014</td>
+                            </tr>
+                            <tr>
+                                <td>{{ticketType.name}}</td>
+                                <td>$5.99</td>
+                                <td>Jan 20 2014</td>
+                                <td>Sep 21 2014</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="close()">Close</button>
+    </div>
+
+</div>
+
+

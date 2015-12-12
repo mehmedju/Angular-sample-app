@@ -1,0 +1,30 @@
+﻿<div class="dropdown display-inline" is-open="status.isOpen">
+    <a class="btn btn-filter dropdown-toggle" data-ng-click="prepareFilterByColumn('FILTER_TYPE_PLACEHOLDER')">
+        <i data-ng-class="isFilteredBy('FILTER_TYPE_PLACEHOLDER') ? 'fa fa-filter' : 'fa fa-chevron-circle-down'"></i>
+
+    </a>
+    <ul class="dropdown-menu filter" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="sort('FILTER_TYPE_PLACEHOLDER', false);" id="sort-FILTER_TYPE_PLACEHOLDER-asc"><i class="fa fa-sort-alpha-asc icon-separated"></i>{{ 'GridColumnFilter.SortAscending' | translate}}</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="sort('FILTER_TYPE_PLACEHOLDER', true);" id="sort-FILTER_TYPE_PLACEHOLDER-desc"><i class="fa fa-sort-alpha-desc icon-separated"></i>{{'GridColumnFilter.SortDescending' | translate}}</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation" class="filter-search" data-stop-event="click">
+            <p>
+                {{'GridColumnFilter.FilterLabel' | translate}} &middot; <a data-ng-click="addAllColumnFilters()" id="selectAll-FILTER_TYPE_PLACEHOLDER">{{'GridColumnFilter.LinkSelectAll' | translate}}</a>
+                &middot; <a data-ng-click="clearAllColumnFilters()" id="clear-FILTER_TYPE_PLACEHOLDER">{{'GridColumnFilter.LinkClear' | translate}}</a>
+            </p>
+            <input type="text" class="form-control input-sm" placeholder="{{'GridColumnFilter.SearchInput' | translate}}" data-ng-model="filterText.name" id="search-FILTER_TYPE_PLACEHOLDER" />
+            <div class="filter-options">
+                <ul>
+                    <li data-ng-class="{'active': item.checked, 'empty-filter-option': !item || !item.name}" data-ng-repeat="item in filterableItems | filter:filterText | filter: applyOutsideFiltering"
+                        data-ng-click="addColumnFilter(item)">{{ item.name || 'empty' }}</li>
+                </ul>
+            </div>
+        </li>
+        <li role="presentation" class="divider"></li>
+        <li class="filter-confirmation" data-stop-event="click">
+            <button type="button" class="btn btn-success btn-sm" data-ng-click="applyColumnFilters()" id="submit-FILTER_TYPE_PLACEHOLDER">{{'GridColumnFilter.ButtonSubmit' | translate}}</button>
+            <button type="button" class="btn btn-default btn-sm" data-ng-click="cancelColumnFilterSelection()" id="cancel-FILTER_TYPE_PLACEHOLDER">{{'GridColumnFilter.ButtonCancel' | translate}}</button>
+        </li>
+
+    </ul>
+</div>

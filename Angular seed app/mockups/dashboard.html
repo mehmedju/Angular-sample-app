@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>NCR CineCenral - Dashboard</title>
+
+    <!-- CSS -->
+    <link href="../app/css/msApp.min.css" rel="stylesheet">
+    <link href="../app/css/font-awesome.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    #g1 {
+        width:220px; height:176px;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img class="img-responsive img-inline" src="img/logo-green.png" style="position:relative; top:-2px; opacity:0.5" />NCR CinéCentral</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="dashboard-feature.html">Sites</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Films <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="dashboard-feature.html">Add a Feature</a></li>
+                <li><a href="dashboard-feature.html">Book a Feature</a></li>
+                <li><a href="dashboard-feature.html">Schedule a Feature</a></li>
+                <li class="divider"></li>
+                <li><a href="dashboard-feature.html">Help</a></li>
+              </ul>
+            </li>
+            <li><a href="dashboard-feature.html">Products</a></li>
+            <li><a href="dashboard-feature.html">Revenue Audit</a></li>
+            <li><a href="dashboard-feature.html">Promotions</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html"><i class="fa fa-sign-out"></i> Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid container-separated-top">
+      <div class="row">
+        
+        <div class="col-md-3">
+            <h2 class="sub-header">Sales</h2>
+            
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Site</th>
+                    <th class="text-right">Sales</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Midtown Hall</td>
+                    <td class="text-right">$25,256</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- <div class="col-md-12 text-center">
+              <div class="circle-chart" data-percent="15"><span class="percent"><span class="brand">+</span>15</span></div>
+              <h5>Sales are up by 15% today.</h5>
+            </div> -->
+
+            
+
+        </div><!--/col-md-3 -->
+
+        <div class="col-md-6">
+          <h2 class="sub-header">Top Selling Movies</h2>
+          <div class="row constrain">
+            <div class="col-md-2 col-lg-2">
+              <img class="img-responsive dashboard-poster" src="img/posters/300.jpg" />
+              <h5>300: Rise of an Empire</h5>
+              <p>$45,038<span class="label label-danger label-separated-left">HOT</span></p>
+            </div>
+            <div class="col-md-2 col-lg-2">
+              <img class="img-responsive dashboard-poster" src="img/posters/mrpeabodyandsherman.jpg" />
+              <h5>Mr. Peabody &amp; Sherman</h5>
+              <p>$32,207<span class="label label-danger label-separated-left">HOT</span></p>
+            </div>
+            <div class="col-md-2 col-lg-2">
+              <img class="img-responsive dashboard-poster" src="img/posters/nonstop.jpg" />
+              <h5>Non-Stop</h5>
+              <p>$15,829</p>
+            </div>
+            <div class="col-md-2 col-lg-2">
+              <img class="img-responsive dashboard-poster" src="img/posters/legomovie.jpg" />
+              <h5>The LEGO Movie</h5>
+              <p>$10,911</p>
+            </div>
+            <div class="col-md-2">
+              <img class="img-responsive dashboard-poster" src="img/posters/3daystokill.jpg" />
+              <h5>3 Days To Kill</h5>
+              <p>$10,379</p>
+            </div>
+            <div class="col-md-2 col-lg-2">
+              <img class="img-responsive dashboard-poster" src="img/posters/nonstop.jpg" />
+              <h5>Non-Stop</h5>
+              <p>$15,829</p>
+            </div>
+          </div>
+
+          <h2 class="sub-header">Upcoming Movies</h2>
+          <div class="row constrain">
+            
+            <div class="col-md-2 col-lg-2">
+              <img class="img-responsive dashboard-poster" src="img/posters/divergent.jpg" />
+              <h5>Divergent</h5>
+              <p>Mar 21 2014</p>
+            </div>
+            <div class="col-md-2 col-lg-2">
+              <img class="img-responsive dashboard-poster" src="img/posters/muppetsmostwanted.jpg" />
+              <h5>Muppets Most Wanted</h5>
+              <p>Mar 21 2014</p>
+            </div>
+            <div class="col-md-2 col-lg-2">
+              <img class="img-responsive dashboard-poster" src="img/posters/sabotage.jpg" />
+              <h5>Sabotage</h5>
+              <p>Mar 28 2014</p>
+            </div>
+            <div class="col-md-2 col-lg-2">
+              <img class="img-responsive dashboard-poster" src="img/posters/captainamericawintersoldier.jpg" />
+              <h5>Captain America: The Winter Soldier</h5>
+              <p>Apr 4, 2014</p>
+            </div>
+            <div class="col-md-2">
+              <img class="img-responsive dashboard-poster" src="img/posters/spiderman2.jpg" />
+              <h5>The Amazing Spider-Man 2</h5>
+              <p>May 2 2014</p>
+            </div>
+            <div class="col-md-2 col-lg-2">
+              <img class="img-responsive dashboard-poster" src="img/posters/sabotage.jpg" />
+              <h5>Sabotage</h5>
+              <p>Mar 28 2014</p>
+            </div>
+          </div>
+
+          <!-- <h2 class="sub-header">Filling Capacity</h2>
+          <div class="row constrain">
+            <div class="col-md-6 col-lg-4">
+              <h4>Top sites</h4>
+              <ol>
+                <li>Midtown Hall<span class="brand bold pull-right">85%</span></li>
+                <li>Buckhead Amphitheater<span class="brand bold pull-right">83%</span></li>
+                <li>North Point Amphitheatre<span class="brand bold pull-right">78%</span></li>
+                <li>Mall of Georgia<span class="brand bold pull-right">74%</span></li>
+              </ol>
+            </div>
+            <div class="col-md-6 col-lg-4 col-lg-offset-1">
+              <h4>Bottom sites</h4>
+              <ol>
+                <li>Cumberland Mall<span class="red bold pull-right">42%</span></li>
+                <li>Cumming Avenues<span class="red bold pull-right">45%</span></li>
+                <li>Suwanee Town Center<span class="red bold pull-right">54%</span></li>
+                <li>Alpharetta Commons<span class="red bold pull-right">56%</span></li>
+              </ol>
+            </div>
+          </div>
+
+          <h2 class="sub-header">Per Capita</h2>
+          <div class="row constrain">
+            <div class="col-md-6 col-lg-4">
+              <h4>Top sites</h4>
+              <ol>
+                <li>Midtown Hall<span class="brand bold pull-right">$24</span></li>
+                <li>Buckhead Amphitheater<span class="brand bold pull-right">$22</span></li>
+                <li>North Point Amphitheatre<span class="brand bold pull-right">$20</span></li>
+                <li>Mall of Georgia<span class="brand bold pull-right">$19</span></li>
+              </ol>
+            </div>
+            <div class="col-md-6 col-lg-4 col-lg-offset-1">
+              <h4>Bottom sites</h4>
+              <ol>
+                <li>Cumberland Mall<span class="red bold pull-right">$6</span></li>
+                <li>Cumming Avenues<span class="red bold pull-right">$7.50</span></li>
+                <li>Suwanee Town Center<span class="red bold pull-right">$9</span></li>
+                <li>Alpharetta Commons<span class="red bold pull-right">$10.50</span></li>
+              </ol>
+            </div>
+          </div>
+        </div> -->
+
+
+
+      </div>
+
+      <div class="col-md-3">
+          <!-- <div id="gauge" class="200x160px"></div> -->
+          <div class="circle">
+            <div id="g1"></div>
+            <div class="circle-label">This site got, on average, $17.5 from each person today.</div>
+          </div>
+      </div>
+    </div>
+    
+  </div><!-- /container-fluid -->
+
+    <!-- JavaScript
+    ================================================== -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easypiechart.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('.circle-chart').easyPieChart({
+            barColor:'rgba(92,184,92,1)',
+        });
+    });
+    </script>
+    <script type="text/javascript">
+    ('.value').html($('input').val())
+
+    $('input').change(function(){
+        var cur = $('input').val();
+        $(this).attr('value', cur );
+        $('.value').html(cur);
+    });
+    </script>
+
+    <script type="text/javascript" src="js/raphael-min.js"></script>
+    <script type="text/javascript" src="js/justgage.1.0.1.min.js"></script>
+    <script>
+    var g1;
+      window.onload = function(){
+        var g1 = new JustGage({
+          id: "g1", 
+          value: 17.5, 
+          min: 0,
+          max: 24,
+          showInnerShadow: false,
+          title: "PerCap",
+          gaugeWidthScale: 0.2,
+          levelColorsGradient: false,
+          levelColors: [
+          "#d9534f",
+          "#f9c802",
+          "#b9d309"
+          ]
+        });
+        };
+    </script>
+  </body>
+</html>

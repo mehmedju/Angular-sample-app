@@ -1,0 +1,6 @@
+[Rr]elease*/
+_ReSharper*/
+*.suo
+Angular seed app/test-results.html
+Angular seed app/test-results.xml
+Angular seed app/app/packages/*

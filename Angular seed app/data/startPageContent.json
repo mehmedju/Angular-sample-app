@@ -1,0 +1,39 @@
+﻿		[
+               {
+                   "title": "Site Management",
+                   "description": "Manage your sites, either directly or collectively in groups with site-level overrides. Site managers logging in will automatically be restricted to viewing/changing just the data for their site."
+                   
+               },
+               {
+                   "title": "Feature Booking",
+                   "description": "Automatically setup all of the upcoming features and easily pull them into a booking grid that allows the user to assign features down to a site or a group of sites and assign the booking commission the same way."
+                   
+               },
+			   {
+                   "title": "Feature Scheduling",
+                   "description": "Automatically produce a tentative schedule for all of your sites directly from the information available from the booking data."
+                   
+               },
+			   {
+                   "title": "Ticket Pricing",
+                   "description": "Solve one of the most complex management tasks of setting ticket pricing by site(s) in an easy to read and even easier to manage ticket pricing solution."
+                   
+               },
+			   {
+                   "title": "Concessions Management",
+                   "description": "Manage your sites, either directly or collectively in groups with site-level overrides. Site managers logging in will automatically be restricted to viewing/changing just the data for their site."
+                   
+               },
+			   {
+                   "title": "Sales Auditing",
+                   "description": "Easily have access to all of your sales data or simply look at just the exception alerts that need your attention. See this information feed into the AP system as well."
+                   
+               },
+			   {
+                   "title": "Reporting and Analytics",
+                   "description": "Come full circle with your data and use it to pin point issues/promotions. Key metrics available right there on the dashboard in an easy to read format."
+                   
+               }
+               
+               
+           ]

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+		<title>NCR CineCenral - Site Management</title>
+
+		<!-- CSS -->
+		<link href="../app/css/msApp.min.css" rel="stylesheet">
+		<link href="../app/css/font-awesome.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+	</head>
+
+	<body class="booking">
+
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img class="img-responsive img-inline" src="img/logo-green.png" style="position:relative; top:-2px; opacity:0.5" />NCR CinéCentral</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="dashboard.html">Dashboard</a></li>
+						<li><a href="dashboard-feature.html">Sites</a></li>
+						<li class="dropdown active">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Films <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="dashboard-feature.html">Add a Feature</a></li>
+								<li><a href="dashboard-feature.html">Book a Feature</a></li>
+								<li><a href="dashboard-feature.html">Schedule a Feature</a></li>
+								<li class="divider"></li>
+								<li><a href="dashboard-feature.html">Help</a></li>
+							</ul>
+						</li>
+						<li><a href="dashboard-feature.html">Products</a></li>
+						<li><a href="dashboard-feature.html">Revenue Audit</a></li>
+						<li><a href="dashboard-feature.html">Promotions</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<!-- <li><a href="#"><i class="fa fa-dot-circle-o brand icon-separated"></i>Signed in as John Smith</a></li> -->
+						<li><a href="index.html"><i class="fa fa-sign-out"></i> Sign out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row no-margin">
+				<div class="col-md-12 main">
+
+					<h2 class="sub-header">Users</h2>
+
+					<div class="row constrain">
+						<div class="col-xs-12 table-header-form">
+							<a class="btn btn-default pull-right" href="#" role="button">Send group message</a>
+							<a class="btn btn-success pull-right" href="#" data-toggle="modal" data-target="#myModal3" role="button" style="margin-right:10px;"><i class="fa fa-plus"></i> Add new user</a>
+							<div class="col-sm-6 no-padding-left">
+								<div class="input-group has-feedback">
+									<input type="text" class="form-control" placeholder="Search users...">
+									<a href="#" class="close clear-search hidden">&times;</a>
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+									</span>
+								</div><!-- /input-group -->
+							</div>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>   
+											<div class="dropdown display-inline">
+												<a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+												<ul class="dropdown-menu filter" role="menu" aria-labelledby="dropdownMenu1">
+													<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-asc icon-separated"></i>Sort A - Z</a></li>
+													<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-desc icon-separated"></i>Sort Z - A</a></li>
+													<li role="presentation" class="divider"></li>
+													<li role="presentation" class="filter-search">
+														<p>Filter &middot; <a href="#">Select all</a> &middot; <a href="#">Clear</a></p>                        
+														<input type="text" class="form-control input-sm" placeholder="Search...">
+														<div class="filter-options">
+															<ul>
+																<li class="active">Something</li>
+																<li class="active">Something</li>
+																<li>Something</li>
+																<li>Something</li>
+																<li>Something</li>
+																<li>Something</li>
+																<li>Something</li>
+																<li>Something</li>
+																<li>Something</li>
+																<li>Something</li>
+																<li>Something</li>
+																<li>Something</li>
+																<li>Something</li>
+																<li>Something</li>
+															</ul>
+														</div>
+													</li>
+													<li role="presentation" class="divider"></li>
+													<li class="filter-confirmation">
+														<button type="button" class="btn btn-success btn-sm">OK</button>
+														<button type="button" class="btn btn-default btn-sm">Cancel</button>
+													</li>
+												</ul>
+											</div>
+											Feature
+										</th>
+										<th><a href="#" class="btn btn-filter"><i class="fa fa-chevron-circle-down"></i></a> Release Date</th>
+										<th><a href="#" class="btn btn-filter"><i class="fa fa-chevron-circle-down"></i></a> Site</th>
+										<th><a href="#" class="btn btn-filter"><i class="fa fa-chevron-circle-down"></i></a> Start Date</th>
+										<th><a href="#" class="btn btn-filter"><i class="fa fa-chevron-circle-down"></i></a> End Date</th>
+										<th><a href="#" class="btn btn-filter"><i class="fa fa-chevron-circle-down"></i></a> Booking</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>300: Rise of an Empire</td>
+										<td>2014-02-20</td>
+										<td>North Point</td>
+										<td>2014-02-20</td>
+										<td>2014-02-20</td>
+										<td>Tiered 70/60/50</td>
+									</tr>
+									<tr>
+										<td>Mr. Peabody &amp; Sherman</td>
+										<td>2014-02-20</td>
+										<td>North Point</td>
+										<td>Mar 7, 2014</td>
+										<td>Mar 7, 2014</td>
+										<td>Tiered 70/60/50</td>
+									</tr>
+									<tr>
+										<td>Non-Stop</td>
+										<td>2014-02-20</td>
+										<td>North Point</td>
+										<td>Mar 7, 2014</td>
+										<td>Mar 7, 2014</td>
+										<td>Tiered 70/60/50</td>
+									</tr>
+									<tr>
+										<td>The LEGO Movie</td>
+										<td>2014-02-20</td>
+										<td>North Point</td>
+										<td>Mar 7, 2014</td>
+										<td>Mar 7, 2014</td>
+										<td>Tiered 70/60/50</td>
+									</tr>
+									<tr>
+										<td>The Wind Rises</td>
+										<td>2014-02-20</td>
+										<td>North Point</td>
+										<td>Mar 7, 2014</td>
+										<td>Mar 7, 2014</td>
+										<td>Tiered 70/60/50</td>
+									</tr>
+									<tr>
+										<td>The Monuments Men</td>
+										<td>2014-02-20</td>
+										<td>North Point</td>
+										<td>Mar 7, 2014</td>
+										<td>Mar 7, 2014</td>
+										<td>Tiered 70/60/50</td>
+									</tr>
+									<tr>
+										<td>3 Days to Kill</td>
+										<td>2014-02-20</td>
+										<td>North Point</td>
+										<td>Mar 7, 2014</td>
+										<td>Mar 7, 2014</td>
+										<td>Tiered 70/60/50</td>
+									</tr>
+									<tr>
+										<td>12 Years a Slave</td>
+										<td>2014-02-20</td>
+										<td>North Point</td>
+										<td>Mar 7, 2014</td>
+										<td>Mar 7, 2014</td>
+										<td>Tiered 70/60/50</td>
+									</tr>
+									<tr>
+										<td>Mr. Peabody &amp; Sherman</td>
+										<td>2014-02-20</td>
+										<td>North Point</td>
+										<td>Mar 7, 2014</td>
+										<td>Mar 7, 2014</td>
+										<td>Tiered 70/60/50</td>
+									</tr>
+									<tr>
+										<td>Ride Along</td>
+										<td>2014-02-20</td>
+										<td>North Point</td>
+										<td>Mar 7, 2014</td>
+										<td>Mar 7, 2014</td>
+										<td>Tiered 70/60/50</td>
+									</tr>
+									<tr>
+										<td>RoboCop (2014)</td>
+										<td>2014-02-20</td>
+										<td>North Point</td>
+										<td>Mar 7, 2014</td>
+										<td>Mar 7, 2014</td>
+										<td>Tiered 70/60/50</td>
+									</tr>               
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+</div>
+
+<!-- JavaScript
+================================================== -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+		e.stopPropagation();
+	});
+</script>
+<script type="text/javascript">
+	// $('.modal-wide')
+	// .on('show.bs.modal', function() {
+	// var height = $(window).height() - 200;
+	//     $(this).find(".modal-body").css("height", height);
+	// });
+	// </script>
+
+</body>
+</html>

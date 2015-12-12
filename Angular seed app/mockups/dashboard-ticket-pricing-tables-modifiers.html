@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>NCR CineCenral - Book Feature</title>
+
+    <!-- CSS -->
+    <link href="../app/css/msApp.min.css" rel="stylesheet">
+    <link href="../app/css/font-awesome.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="booking">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img class="img-responsive img-inline" src="img/logo-green.png" style="position:relative; top:-2px; opacity:0.5" />NCR CinéCentral</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="dashboard-feature.html">Sites</a></li>
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Films <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="dashboard-feature.html">Add a Feature</a></li>
+                <li><a href="dashboard-feature.html">Book a Feature</a></li>
+                <li><a href="dashboard-feature.html">Schedule a Feature</a></li>
+                <li class="divider"></li>
+                <li><a href="dashboard-feature.html">Help</a></li>
+              </ul>
+            </li>
+            <li><a href="dashboard-feature.html">Products</a></li>
+            <li><a href="dashboard-feature.html">Revenue Audit</a></li>
+            <li><a href="dashboard-feature.html">Promotions</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="#"><i class="fa fa-dot-circle-o brand icon-separated"></i>Signed in as John Smith</a></li> -->
+            <li><a href="index.html"><i class="fa fa-sign-out"></i> Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row no-margin">
+        <div class="col-md-12 main">
+          
+          <h2 class="sub-header">Ticket types</h2>
+
+          <div class="row constrain">
+            <div class="col-md-12 table-header-form">
+              <a class="btn btn-success pull-right" href="#" role="button"><i class="fa fa-plus"></i> Add new ticket type</a>
+                        <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">Modify multiple base prices <span class="caret"></span></button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#current_price_modal">Current prices</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#future_price_modal">Future prices</a></li>
+  </ul>
+</div>
+          
+
+
+            </div>
+          </div>
+          
+
+          <div class="table-responsive">
+            <table class="table table-striped pricing-table-responsive">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th><div class="price-table-header-arrows-left"><i class="fa fa-angle-left"></i> </div>Adult <span class="chart-icon-left" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-bar-chart-o"></i></span></th>
+                  <th>Child <span class="chart-icon-left" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-bar-chart-o"></i></span></th>
+                  <th>Senior <span class="chart-icon-left" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-bar-chart-o"></i></span></th>
+                  <th>Military <span class="chart-icon-left" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-bar-chart-o"></i></span></th>
+                  <th>Student <span class="chart-icon-left" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-bar-chart-o"></i></span><div class="price-table-header-arrows"><i class="fa fa-angle-right"></i> </div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Early bird</td>
+                  <td>6.00 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>
+                  <td>6.50 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>
+                  <td>6.00 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>
+                  <td>6.00 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>               
+                  <td>6.00 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>   
+                </tr>
+                <tr>
+                  <td>Matinee</td>
+                  <td>6.50 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>
+                  <td>6.50 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>
+                  <td> <div class="row"><div class="col-sm-6 no-padding-right no-margin-top-botom">
+                                <div class="form-group form-group-same-margin">
+                    <input type="text" class="form-control input-small-table" id="input1" placeholder="6.50 $"></div></div>
+                        <div class="col-sm-6 no-padding-left no-margin-top-botom">
+                    <div class="input-group form-group-same-margin">
+                    <input type="text" class="form-control input-small-table " datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Effective date"/>
+                    <span class="input-group-btn  input-small-table no-margin-top-botom">
+                      <button class="btn btn-default input-small-table form-group-vertical-align" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                    </div> 
+                </div>
+                      </div></td>
+                  <td>6.50 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>               
+                  <td>6.50 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>   
+                </tr>
+                <tr>
+                  <td>Evening</td>
+                  <td>6.50 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>
+                  <td>6.50 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>
+                  <td>6.50 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>
+                  <td>6.50 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>               
+                  <td>6.50 $ <span class="label label-success widgets-table"><div>6.00 $</div><div>Feb 22, 2014</div></span></td>   
+                </tr>
+              </tbody>
+            </table>
+            </div>
+                     <div class="row no-margin-left-right">
+             <div class="dimensions-separator">
+              <span class="label label-success widgets-table-separator">Predefined dimensions</span>
+              </div>
+          </div>
+                  <div class="table-responsive">
+            <table class="table table-striped dimensions-table">
+              <thead>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Reserved seating</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>3D</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                </tr>
+                <tr>
+                  <td>IMAX</td>
+                  <td>+ 1.50 $</td>
+                  <td>+ 1.50 $</td>
+                  <td>+ 1.50 $</td>
+                  <td>+ 1.50 $</td>
+                  <td>+ 1.50 $</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+                                 <div class="row no-margin-left-right">
+             <div class="dimensions-separator">
+              <span class="label label-success widgets-table-separator">Location dimensions</span>
+              </div>
+          </div>
+                  <div class="table-responsive">
+            <table class="table table-striped dimensions-table">
+              <thead>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><i class="fa fa-pencil icon-separated"></i><i class="fa fa-times icon-separated"></i> West coast</td>
+                  <td>- 1.00 $</td>
+                  <td>- 1.00 $</td>
+                  <td>- 1.00 $</td>
+                  <td>- 1.00 $</td>
+                  <td>- 1.00 $</td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-pencil icon-separated"></i><i class="fa fa-times icon-separated"></i> L.A.</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-pencil icon-separated"></i><i class="fa fa-times icon-separated"></i> All sites in Georgia</td>
+                  <td>+ 1.50 $</td>
+                  <td>+ 1.50 $</td>
+                  <td>+ 1.50 $</td>
+                  <td>+ 1.50 $</td>
+                  <td>+ 1.50 $</td>
+                </tr>
+                  <tr>
+                  <td><i class="fa fa-pencil icon-separated"></i><i class="fa fa-times icon-separated"></i> All sites in NZ</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+                                             <div class="row no-margin-left-right">
+             <div class="dimensions-separator">
+              <span class="label label-success widgets-table-separator">Time dimensions</span>
+              </div>
+          </div>
+                  <div class="table-responsive">
+            <table class="table table-striped dimensions-table">
+              <thead>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><i class="fa fa-pencil icon-separated"></i><i class="fa fa-times icon-separated"></i> Tuesday</td>
+                  <td>- 1.00 $</td>
+                  <td>- 1.00 $</td>
+                  <td>- 1.00 $</td>
+                  <td>- 1.00 $</td>
+                  <td>- 1.00 $</td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-pencil icon-separated"></i><i class="fa fa-times icon-separated"></i> Friday</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                  <td>+ 1.00 $</td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-pencil icon-separated"></i><i class="fa fa-times icon-separated"></i> Happy hour</td>
+                  <td>+ 1.50 $</td>
+                  <td>+ 1.50 $</td>
+                  <td>+ 1.50 $</td>
+                  <td>+ 1.50 $</td>
+                  <td>+ 1.50 $</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+                                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="dropdown">
+  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-plus"></i> Add new dimension <span class="caret"></span></button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#myModal3">Time dimension</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#myModal4">Location dimension</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#myModal5">Feature dimension</a></li>
+  </ul>
+</div>
+                    </div>
+                    </div>
+        </div>
+      </div>
+    </div>
+      
+      
+ <!-- Modal history -->
+
+<div class="modal modal-wide modal-height" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-pricing">
+        <div class="modal-content modal-pricing-font">
+         <div class="modal-header modal-header-pricing">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Pricing history</h4>
+          </div>
+          <div class="modal-body modal-body-height"> 
+              <div class="row">
+              <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="input3" class="control-label">Price:</label>
+                    <input type="text" class="form-control" id="input1" placeholder="Price">
+                  </div>                  
+            </div>
+                  <div class="col-md-4">
+                <div class="form-group">
+                <label  class="control-label">Effective from:</label>
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" show-button-bar="false" close-on-date-selection="false" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Select date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>
+                </div>                  
+                </div>
+                  <div class="col-md-4">
+                                  <div class="form-group">
+                <label  class="control-label">Effective to:</label>
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Select date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>
+                    </div>
+                  </div>
+              </div>
+                <form role="form"> 
+                <div class="col-md-12 no-padding-left">
+                              <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>
+                    
+                    <div class="dropdown display-inline">
+                       <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                      <ul class="dropdown-menu filter" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-asc icon-separated"></i>Sort A - Z</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-desc icon-separated"></i>Sort Z - A</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation" class="filter-search">
+                          <p>Filter &middot; <a href="#">Select all</a> &middot; <a href="#">Clear</a></p>                        
+                          <input type="text" class="form-control input-sm" placeholder="Search...">
+                          <div class="filter-options">
+                            <ul>
+                              <li class="active">Something</li>
+                              <li class="active">Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li class="filter-confirmation">
+                          <button type="button" class="btn btn-success btn-sm">OK</button>
+                          <button type="button" class="btn btn-default btn-sm">Cancel</button>
+                        </li>
+                      </ul>
+                    </div>
+                      Ticket Type
+                  </th>
+                  <th>
+                    <div class="dropdown display-inline">
+                      <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                    </div>
+                    Price
+                  </th>
+                  <th>
+                    <div class="dropdown display-inline">
+                      <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                    </div>
+                    Effective from Date
+                  </th>
+                  <th>
+                    <div class="dropdown display-inline">
+                      <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                    </div>
+                    Effective to Date
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Adult</td>
+                  <td>$10.99</td>
+                  <td>Jan 20 2014</td>
+                  <td>Jun 22 2014</td>
+                </tr>
+                <tr>
+                  <td>Adult</td>
+                  <td>$8.99</td>
+                  <td>Jan 20 2014</td>
+                  <td>Aug 12 2014</td>
+                </tr>
+                <tr>
+                  <td>Adult</td>
+                  <td>$8.99</td>
+                  <td>Jan 20 2014</td>
+                  <td>Aug 12 2014</td>
+                </tr>
+                <tr>
+                  <td>Adult</td>
+                  <td>$5.99</td>
+                  <td>Jan 20 2014</td>
+                  <td>Sep 21 2014</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+                  </div>
+                </form>
+        </div> 
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal new dimension -->
+
+    <div class="modal modal-wide modal-height" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-pricing">
+        <div class="modal-content modal-pricing-font">
+         <div class="modal-header modal-header-pricing">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Add new dimension</h4>
+          </div>
+          <div class="modal-body modal-body-height">
+            <div class="col-sm-6 no-padding-left">
+              <div class="form-group">
+                    <label for="inputAudName" class="control-label">Dimension name:</label>
+                      <input type="text" class="form-control" id="inputAudName" placeholder="Dimension name">
+                  </div>
+                 <div class="row margin-top-row">
+                                <div class="col-xs-12 col-sm-12 col-lg-12" data-ng-controller="DatepickerDemoCtrl">
+                <label  class="control-label">Date:</label>
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" show-button-bar="false" close-on-date-selection="false" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Select date" disabled />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)" disabled><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>
+              </div>
+                </div>
+                                  <div class="row margin-top-row">
+                <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <input id="demo_box_day_week" class="css-checkbox" type="checkbox" checked="checked" />
+					<label for="demo_box_day_week" name="demo_lbl_day_week" class="css-label">Fixed day(s) of the week</label>
+                    </div>
+                    </div>
+                                <div class="row margin-top-row">
+                <div class="col-xs-12 col-sm-12 col-lg-12">
+                <div class="day-of-week-disabled">MON</div><div class="day-of-week-disabled">TUE</div><div class="day-of-week-enabled">WEN</div>
+                <div class="day-of-week-disabled">THU</div><div class="day-of-week-disabled">FRI</div><div class="day-of-week-enabled">SAT</div><div class="day-of-week-enabled">SUN</div>
+                    </div>
+                    </div>
+                                  <div class="row margin-top-row">
+                <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <input id="demo_box_all_day" class="css-checkbox" type="checkbox" checked="checked" />
+					<label for="demo_box_all_day" name="demo_lbl_all_day" class="css-label">All day</label>
+                    </div>
+                    </div>
+                                 <div class="row margin-top-row">
+              <div class="col-xs-6 col-sm-6 col-lg-6">
+                <label  class="control-label">Start time:</label>
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="10:15 PM" disabled />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="fa fa-clock-o"></i></button>
+                </span>
+                </div>
+              </div>
+
+              <div class="col-xs-6 col-sm-6 col-lg-6">
+                <label  class="control-label">End time:</label>
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="10:15 PM" disabled />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="fa fa-clock-o"></i></button>
+                </span>
+                </div>
+              </div>
+                </div>
+            </div>
+              <div class="col-sm-6 no-padding-right">
+                  <div class="col-sm-12 pricing-right">
+                   <h4 class="divider">Assign modifiers to ticket types</h4>
+
+                                    <div class="form-group">
+                    <label for="inputAudName" class="control-label">Adult:</label>
+                      <input type="text" class="form-control" id="inputAudName" placeholder="$ 0.00">
+                  </div>
+                                    <div class="form-group">
+                    <label for="inputAudName" class="control-label">Child:</label>
+                      <input type="text" class="form-control" id="inputAudName" placeholder="$ 0.00">
+                  </div>
+                                    <div class="form-group">
+                    <label for="inputAudName" class="control-label">Senior:</label>
+                      <input type="text" class="form-control" id="inputAudName" placeholder="$ 0.00">
+                  </div>
+                                    <div class="form-group">
+                    <label for="inputAudName" class="control-label">Military:</label>
+                      <input type="text" class="form-control" id="inputAudName" placeholder="$ 0.00">
+                  </div>
+                    </div>
+
+                  </div>
+              
+              
+              
+              
+              
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Add dimension</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+        <!-- Modal new location dimension -->
+
+    <div class="modal modal-wide modal-height" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-pricing">
+        <div class="modal-content modal-pricing-font">
+         <div class="modal-header modal-header-pricing">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Add new dimension</h4>
+          </div>
+          <div class="modal-body modal-body-height">
+            <div class="col-sm-6 no-padding-left">
+              <div class="form-group">
+                    <label for="inputAudName" class="control-label">Dimension name:</label>
+                      <input type="text" class="form-control" id="inputAudName" placeholder="Dimension name">
+                  </div>
+                  <div class="row margin-top-row">
+                <div class="col-xs-12 col-sm-12 col-lg-12">
+                <div class="form-group">
+                    <label for="input4" class="control-label">Country:</label>
+                      <select class="form-control" >
+                         <option>United States</option>
+                         <option>1</option>
+                         <option>2</option>
+                         <option>3</option>
+                         <option>4</option>
+                       </select>
+                  </div>
+                    </div>
+                <div class="col-xs-12 col-sm-12 col-lg-12">
+                <div class="form-group">
+                    <label for="input4" class="control-label">State:</label>
+                      <select class="form-control" >
+                         <option>Georgia</option>
+                         <option>1</option>
+                         <option>2</option>
+                         <option>3</option>
+                         <option>4</option>
+                       </select>
+                  </div>
+                    </div>
+                    </div>
+                  <div class="row">
+                <div class="col-xs-12 col-sm-12 col-lg-12">
+                <div class="form-group">
+                    <label for="input4" class="control-label">City:</label>
+                      <select class="form-control">
+                         <option>All</option>
+                         <option>1</option>
+                         <option>2</option>
+                         <option>3</option>
+                         <option>4</option>
+                       </select>
+                  </div>
+                    </div>
+                    </div>
+
+            </div>
+              <div class="col-sm-6 no-padding-right">
+                  <div class="col-sm-12 pricing-right">
+                   <h4 class="divider">Assign modifiers to ticket types</h4>
+
+                                    <div class="form-group">
+                    <label for="inputAudName" class="control-label">Adult:</label>
+                      <input type="text" class="form-control" id="inputAudName" placeholder="$ 0.00">
+                  </div>
+                                    <div class="form-group">
+                    <label for="inputAudName" class="control-label">Child:</label>
+                      <input type="text" class="form-control" id="inputAudName" placeholder="$ 0.00">
+                  </div>
+                                    <div class="form-group">
+                    <label for="inputAudName" class="control-label">Senior:</label>
+                      <input type="text" class="form-control" id="inputAudName" placeholder="$ 0.00">
+                  </div>
+                                    <div class="form-group">
+                    <label for="inputAudName" class="control-label">Military:</label>
+                      <input type="text" class="form-control" id="inputAudName" placeholder="$ 0.00">
+                  </div>
+                    </div>
+
+                  </div>
+              
+              
+              
+              
+              
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Add dimension</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    
+          <!-- Modal multiple price edit -->
+
+<div class="modal modal-wide modal-height label-modal-multiple-pricing" id="future_price_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-pricing">
+        <div class="modal-content modal-pricing-font">
+         <div class="modal-header modal-header-pricing">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Set future price for multiple items</h4>
+          </div>
+          <div class="modal-body modal-body-height"> 
+              <div class="row">
+              <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="input3" class="control-label">Price:</label>
+                    <input type="text" class="form-control" id="input1" placeholder="Price">
+                  </div>                  
+            </div>
+                  <div class="col-md-4">
+                <div class="form-group">
+                <label  class="control-label">Effective from:</label>
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" show-button-bar="false" close-on-date-selection="false" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Select date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>
+                </div>                  
+                </div>
+                  <div class="col-md-4">
+                                  <div class="form-group">
+                <label  class="control-label">Effective to:</label>
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Select date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>
+                    </div>
+                  </div>
+              </div>
+                <div class="col-md-12 no-padding-left">
+                    <div class="row no-margin-left-right">
+                    <div class="price-table label-modal-multiple-pricing"> 
+                    <div class="col-sm-2 pricing-table no-padding-left dimensions-table-margin-bottom">
+                        <div class="price-table-header-dimensions">
+                        </div>
+                         <ul>
+                           <li class="odd dimension-left">
+					<input id="demo_box_13" class="css-checkbox-pricing" type="checkbox"  />
+					<label for="demo_box_13" name="demo_lbl_13" class="css-label-pricing"> Early bird</label>
+                      </li>
+                            <li class="even dimension-left">
+					<input id="demo_box_14" class="css-checkbox-pricing" type="checkbox"  />
+					<label for="demo_box_14" name="demo_lbl_14" class="css-label-pricing"> Matinee</label>
+                      </li>
+                            <li class="odd dimension-left">
+					<input id="demo_box_15" class="css-checkbox-pricing" type="checkbox" checked="checked" />
+					<label for="demo_box_15" name="demo_lbl_15" class="css-label-pricing"> Evening</label>
+                      </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 pricing-table dimensions-table-margin-bottom">
+                        <div class="price-table-header">
+                        <input id="demo_box_16" class="css-checkbox-pricing" type="checkbox" checked="checked" />
+					<label for="demo_box_16" name="demo_lbl_16" class="css-label-pricing"> Adult</label>
+                        </div>
+                        <ul>
+                            <li class="odd">					
+					<input id="demo_box_1" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="demo_box_1" name="demo_lbl_1" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="even">
+					<input id="demo_box_2" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="demo_box_2" name="demo_lbl_2" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="odd">
+					<input id="demo_box_3" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="demo_box_3" name="demo_lbl_3" class="css-label-ticketing"></label>
+                      </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 pricing-table dimensions-table-margin-bottom">
+                        <div class="price-table-header">
+                        <input id="demo_box_17" class="css-checkbox-pricing" type="checkbox"  />
+					<label for="demo_box_17" name="demo_lbl_17" class="css-label-pricing"> Child</label>
+                        </div>
+                        <ul>
+                            <li class="odd">					
+					<input id="demo_box_1" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="demo_box_1" name="demo_lbl_1" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="even">
+					<input id="demo_box_2" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="demo_box_2" name="demo_lbl_2" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="odd">
+					<input id="demo_box_3" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="demo_box_3" name="demo_lbl_3" class="css-label-ticketing"></label>
+                      </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 pricing-table dimensions-table-margin-bottom">
+                        <div class="price-table-header">
+                        <input id="demo_box_18" class="css-checkbox-pricing" type="checkbox"  />
+					<label for="demo_box_18" name="demo_lbl_18" class="css-label-pricing"> Senior</label>
+                        </div>
+                        <ul>
+                            <li class="odd">					
+					<input id="demo_box_4" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="demo_box_4" name="demo_lbl_4" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="even">
+					<input id="demo_box_5" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="demo_box_5" name="demo_lbl_5" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="odd">
+					<input id="demo_box_6" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="demo_box_6" name="demo_lbl_6" class="css-label-ticketing"></label>
+                      </li>
+                        </ul>
+                    </div>
+                     <div class="col-sm-2 pricing-table dimensions-table-margin-bottom">
+                        <div class="price-table-header">
+                        <input id="demo_box_19" class="css-checkbox-pricing" type="checkbox"  />
+					<label for="demo_box_19" name="demo_lbl_19" class="css-label-pricing"> Military</label>
+                        </div>
+                        <ul>
+                            <li class="odd">					
+					<input id="demo_box_7" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="demo_box_7" name="demo_lbl_7" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="even">
+					<input id="demo_box_8" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="demo_box_8" name="demo_lbl_8" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="odd">
+					<input id="demo_box_9" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="demo_box_9" name="demo_lbl_9" class="css-label-ticketing"></label>
+                      </li>
+                        </ul>
+                    </div>
+                     <div class="col-sm-2 pricing-table dimensions-table-margin-bottom">
+                        <div class="price-table-header">
+                        <input id="demo_box_20" class="css-checkbox-pricing" type="checkbox"  />
+					<label for="demo_box_20" name="demo_lbl_20" class="css-label-pricing"> Student</label>
+                        </div>
+                        <ul>
+                            <li class="odd">					
+					<input id="demo_box_10" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="demo_box_10" name="demo_lbl_10" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="even">
+					<input id="demo_box_11" class="css-checkbox-ticketing" type="checkbox" />
+					<label for="demo_box_11" name="demo_lbl_11" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="odd">
+					<input id="demo_box_12" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="demo_box_12" name="demo_lbl_13" class="css-label-ticketing"></label>
+                      </li>
+                        </ul>
+                    </div>
+                    </div>
+                                            </div>                  </div>
+                  <div class="col-md-12 no-padding-left">
+                   <p class="pull-right"><a href="#">Select all</a> &middot; <a href="#">Clear all</a></p>
+                   </div>
+
+        </div> 
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save</button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+      
+      
+      
+                <!-- Modal multiple current prices edit -->
+
+<div class="modal modal-wide modal-height label-modal-multiple-pricing" id="current_price_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-pricing">
+        <div class="modal-content modal-pricing-font">
+         <div class="modal-header modal-header-pricing">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Set current price for multiple items</h4>
+          </div>
+          <div class="modal-body modal-body-height"> 
+              <div class="row">
+              <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="input3" class="control-label">Price:</label>
+                    <input type="text" class="form-control" id="input1" placeholder="Price">
+                  </div>                  
+            </div>
+              </div>
+                <div class="col-md-12 no-padding-left">
+                    <div class="row no-margin-left-right">
+                    <div class="price-table label-modal-multiple-pricing"> 
+                    <div class="col-sm-2 pricing-table no-padding-left dimensions-table-margin-bottom">
+                        <div class="price-table-header-dimensions">
+                        </div>
+                         <ul>
+                           <li class="odd dimension-left">
+					<input id="multi_curr_price_1" class="css-checkbox-pricing" type="checkbox"  />
+					<label for="multi_curr_price_1" name="multi_curr_price_1" class="css-label-pricing"> Early bird</label>
+                      </li>
+                            <li class="even dimension-left">
+					<input id="multi_curr_price_2" class="css-checkbox-pricing" type="checkbox"  />
+					<label for="multi_curr_price_2" name="multi_curr_price_2" class="css-label-pricing"> Matinee</label>
+                      </li>
+                            <li class="odd dimension-left">
+					<input id="multi_curr_price_3" class="css-checkbox-pricing" type="checkbox" checked="checked" />
+					<label for="multi_curr_price_3" name="multi_curr_price_3" class="css-label-pricing"> Evening</label>
+                      </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 pricing-table dimensions-table-margin-bottom">
+                        <div class="price-table-header">
+                        <input id="multi_curr_price_4" class="css-checkbox-pricing" type="checkbox" checked="checked" />
+					<label for="multi_curr_price_4" name="multi_curr_price_4" class="css-label-pricing"> Adult</label>
+                        </div>
+                        <ul>
+                            <li class="odd">					
+					<input id="multi_curr_price_5" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="multi_curr_price_5" name="multi_curr_price_5" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="even">
+					<input id="multi_curr_price_6" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="multi_curr_price_6" name="demo_lbl_6" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="odd">
+					<input id="multi_curr_price_7" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="multi_curr_price_7" name="multi_curr_price_7" class="css-label-ticketing"></label>
+                      </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 pricing-table dimensions-table-margin-bottom">
+                        <div class="price-table-header">
+                        <input id="multi_curr_price_8" class="css-checkbox-pricing" type="checkbox"  />
+					<label for="multi_curr_price_8" name="multi_curr_price_8" class="multi_curr_price_1"> Child</label>
+                        </div>
+                        <ul>
+                            <li class="odd">					
+					<input id="multi_curr_price_9" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="multi_curr_price_9" name="multi_curr_price_9" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="even">
+					<input id="multi_curr_price_10" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="multi_curr_price_10" name="multi_curr_price_10" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="odd">
+					<input id="multi_curr_price_11" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="multi_curr_price_11" name="multi_curr_price_11" class="css-label-ticketing"></label>
+                      </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 pricing-table dimensions-table-margin-bottom">
+                        <div class="price-table-header">
+                        <input id="multi_curr_price_12" class="css-checkbox-pricing" type="checkbox"  />
+					<label for="multi_curr_price_12" name="multi_curr_price_12" class="css-label-pricing"> Senior</label>
+                        </div>
+                        <ul>
+                            <li class="odd">					
+					<input id="multi_curr_price_13" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="multi_curr_price_13" name="multi_curr_price_13" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="even">
+					<input id="multi_curr_price_14" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="multi_curr_price_14" name="multi_curr_price_14" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="odd">
+					<input id="multi_curr_price_15" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="multi_curr_price_15" name="multi_curr_price_15" class="css-label-ticketing"></label>
+                      </li>
+                        </ul>
+                    </div>
+                     <div class="col-sm-2 pricing-table dimensions-table-margin-bottom">
+                        <div class="price-table-header">
+                        <input id="multi_curr_price_16" class="css-checkbox-pricing" type="checkbox"  />
+					<label for="multi_curr_price_16" name="multi_curr_price_16" class="css-label-pricing"> Military</label>
+                        </div>
+                        <ul>
+                            <li class="odd">					
+					<input id="multi_curr_price_17" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="multi_curr_price_1" name="multi_curr_price_1" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="even">
+					<input id="multi_curr_price_17" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="multi_curr_price_17" name="multi_curr_price_17" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="odd">
+					<input id="multi_curr_price_18" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="multi_curr_price_18" name="multi_curr_price_18" class="css-label-ticketing"></label>
+                      </li>
+                        </ul>
+                    </div>
+                     <div class="col-sm-2 pricing-table dimensions-table-margin-bottom">
+                        <div class="price-table-header">
+                        <input id="multi_curr_price_19" class="css-checkbox-pricing" type="checkbox"  />
+					<label for="multi_curr_price_19" name="multi_curr_price_19" class="css-label-pricing"> Student</label>
+                        </div>
+                        <ul>
+                            <li class="odd">					
+					<input id="multi_curr_price_20" class="css-checkbox-ticketing" type="checkbox"  />
+					<label for="multi_curr_price_20" name="multi_curr_price_20" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="even">
+					<input id="multi_curr_price_21" class="css-checkbox-ticketing" type="checkbox" />
+					<label for="multi_curr_price_21" name="multi_curr_price_21" class="css-label-ticketing"></label>
+                      </li>
+                            <li class="odd">
+					<input id="multi_curr_price_22" class="css-checkbox-ticketing" type="checkbox" checked="checked" />
+					<label for="multi_curr_price_22" name="multi_curr_price_22" class="css-label-ticketing"></label>
+                      </li>
+                        </ul>
+                    </div>
+                    </div>
+                                            </div>                  </div>
+                  <div class="col-md-12 no-padding-left">
+                   <p class="pull-right"><a href="#">Select all</a> &middot; <a href="#">Clear all</a></p>
+                   </div>
+
+        </div> 
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+              <!-- Modal new feature dimension -->
+
+    <div class="modal modal-wide modal-height" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-pricing">
+        <div class="modal-content modal-pricing-font">
+         <div class="modal-header modal-header-pricing">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Edit modifier</h4>
+          </div>
+          <div class="modal-body modal-body-height">
+            <div class="col-sm-6 no-padding-left">
+
+                                              <div class="col-lg-12 col-xs-12 col-sm-12 no-padding-left no-padding-right">
+                                 
+                  <div class="form-group">
+                    <label for="input1" class="control-label">Name:</label>
+                    <input type="text" class="form-control" id="input3" placeholder="IMAX">
+                  </div>
+                                                                <div class="form-group">
+                    <label for="inputAudName" class="control-label">Experience:</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="inputAudName" placeholder="Start typing..." disabled><span class="input-group-btn"><button class="btn btn-default green-btn-experiences" type="button" href="#" data-toggle="modal" data-target="" role="button"><i class="fa fa-ellipsis-h"></i></button></span>
+                    </div>
+                  </div>
+            <div class="experiences-results form-group">
+                    <div class="list">
+                    <div class="row no-margin-left-right">
+                      <div class="col-sm-2 no-padding-left no-padding-right">
+                        <img class="img-responsive margin-icons-top" src="img/dbox.png">
+                     </div>
+                     <div class="col-sm-10">
+                         <p class="title no-padding-top-exp no-margin-bottom-exp">Dbox experience</p>
+                     </div>
+                     </div>
+                    </div>
+            </div>
+                  <div class="form-group">
+                    <label for="input2" class="control-label">Description:</label>
+                    <textarea id=”service-descr” class="form-control" placeholder="A technique of widescreen cinematography which produces an image approximately ten times larger than that from standard 35 mm film" rows="4"></textarea>
+                  </div>
+                  </div>
+                                                    <div class="col-sm-12 no-padding-left">
+                  <div class="checkbox-left checkbox-left-experiences">
+                      					<div class="checkbox-style checkbox-style-experiences no-padding-left">
+					<input id="demo_box_800" class="css-checkbox" type="checkbox" checked="checked" />
+					<label for="demo_box_800" name="demo_lbl_800" class="css-label">Set experience icon as default</label>
+                      </div>
+
+                  </div>
+                </div>
+
+                  <div class="col-sm-12 no-padding-left no-padding-right upload-fields-disabled">
+                  <div class="col-sm-2 no-padding-left no-padding-right">
+                   <div class="upload-picture-frame"><i class="fa fa-picture-o"></i></div>     
+                  </div>
+                  <div class="col-sm-10">
+                  <div class="col-sm-12 no-padding-left no-padding-right upload-picture-selected-file">
+                    No file selected      
+                  </div>
+                      <div class="col-sm-12 no-padding-left no-padding-right upload-picture-suggestions">
+                   JPG, JPEG, GIF, PNG (max size 2 MB)     
+                  </div>
+                  <div class="col-sm-12 no-padding-left no-padding-right">
+                      <p class="view-all-experiences relative"><i class="fa fa-upload icon-separated"></i>Upload file</p> 
+                      </div>
+                    </div>     
+                  </div>
+                  <div class="col-sm-12 no-padding-left no-padding-right margin-picture-upload upload-fields-disabled">
+                  <div class="col-sm-2 no-padding-left no-padding-right">
+                   <div class="upload-picture-frame"><i class="fa fa-picture-o"></i></div>     
+                  </div>
+                  <div class="col-sm-10">
+                  <div class="col-sm-12 no-padding-left no-padding-right upload-picture-selected-file">
+                    No file selected      
+                  </div>
+                      <div class="col-sm-12 no-padding-left no-padding-right upload-picture-suggestions">
+                   JPG, JPEG, GIF, PNG (max size 2 MB)     
+                  </div>
+                  <div class="col-sm-12 no-padding-left no-padding-right">
+                      <p class="view-all-experiences relative"><i class="fa fa-upload icon-separated"></i>Upload file</p> 
+                      </div>
+                    </div>     
+                  </div>
+           </div>
+              <div class="col-sm-6 no-padding-right">
+                  <div class="col-sm-12 pricing-right pricing-modifier">
+                   <h4 class="divider">Pricing</h4>
+<div class="radio-button-modal-modifiers"><input type="radio" name="radiog_dark" id="radio4" class="css-checkbox-popover" /><label for="radio4" class="css-label-popover radGroup2">Increase</label></div>
+<div class="radio-button-modal-modifiers"><input type="radio" name="radiog_dark" id="radio5" class="css-checkbox-popover" checked="checked"/><label for="radio5" class="css-label-popover radGroup2">Decrease</label></div>
+<div class="radio-button-modal-modifiers"><input type="radio" name="radiog_dark" id="radio6" class="css-checkbox-popover" /><label for="radio6" class="css-label-popover radGroup2">Override prices</label></div>
+                                    <div class="form-group">
+                    <label for="inputAudName" class="control-label">Adult:</label>
+                      <input type="text" class="form-control">
+                    <div class="checkbox-style-modifier no-padding-left">
+					<input id="demo_box_804" class="css-checkbox css-checkbox-modifier" type="checkbox" />
+					<label for="demo_box_804" name="demo_lbl_800" class="css-label checkbox-style-modifier-label css-checkbox-modifier">Omit ticktet class</label>
+                    </div>
+                                    </div>
+                                    <div class="form-group">
+                    <label for="inputAudName" class="control-label">Child:</label>
+  <input type="text" class="form-control">
+                    <div class="checkbox-style-modifier no-padding-left">
+					<input id="demo_box_803" class="css-checkbox css-checkbox-modifier" type="checkbox" />
+					<label for="demo_box_803" name="demo_lbl_803" class="css-label checkbox-style-modifier-label css-checkbox-modifier">Omit ticktet class</label>
+                    </div>
+                                    </div>
+                                    <div class="form-group">
+                    <label for="inputAudName" class="control-label">Senior:</label>
+  <input type="text" class="form-control" disabled>
+                    <div class="checkbox-style-modifier no-padding-left">
+					<input id="demo_box_802" class="css-checkbox css-checkbox-modifier" type="checkbox" checked="checked" />
+					<label for="demo_box_802" name="demo_lbl_802" class="css-label checkbox-style-modifier-label css-checkbox-modifier">Omit ticktet class</label>
+                    </div>
+              </div>
+                                    <div class="form-group">
+                    <label for="inputAudName" class="control-label">Military:</label>
+  <input type="text" class="form-control" disabled>
+                     <div class="checkbox-style-modifier no-padding-left">
+					<input id="demo_box_801" class="css-checkbox css-checkbox-modifier" type="checkbox" checked="checked" />
+					<label for="demo_box_801" name="demo_lbl_801" class="css-label checkbox-style-modifier-label css-checkbox-modifier">Omit ticktet class</label>
+                    </div>
+                  </div>
+                    </div>
+
+                  </div>
+              
+              
+              
+              
+              
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Add modifier</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- JavaScript
+    ================================================== -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+        e.stopPropagation();
+    });
+    </script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.10.0.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

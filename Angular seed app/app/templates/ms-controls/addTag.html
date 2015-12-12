@@ -1,0 +1,28 @@
+﻿<form>
+    <h5>Select tag:</h5>
+    <div>
+        <ul class="custom-tags">
+            <li data-ng-repeat="item in defaultTags track by $index"><a href=""><span class="custom-tag" data-ng-click="addTagFromDefaultTags($event,item,$index)">{{item.name}}</span> </a></li>
+        </ul>
+    </div>
+    <div data-ng-show="isCustomTagEnabled">
+        <input type="text" placeholder="Enter a tag" maxlength="20" name="inputForEnteringTag" id="inputForEnteringAttributes" data-ng-model="$parent.insertedTag" class="custom-tag-input-field" />
+        <input type="submit" class="btn btn-default" data-ng-click="addNewTag()" value="Add">
+    </div>
+    <p>
+        <br />
+        Added tags:
+        <a href="" data-ng-click="clear()" class="text-spacing">Clear all</a>
+    </p>
+    <div class="col-md-6">
+        <div class="custom-tag-frame">
+            <ul class="custom-tags">
+                <li>
+                    <span data-ng-repeat="item in selectedTags track by $index" class="custom-tag">{{item.name}} 
+                    <span><i class="fa fa-times icon-separated" data-ng-click="remove(item,$index)"></i></span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</form>

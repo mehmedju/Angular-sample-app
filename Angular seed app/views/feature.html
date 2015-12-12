@@ -1,0 +1,115 @@
+<div class="booking">
+
+    <div class="container-fluid" data-ng-controller="featureCtrl">
+        <div class="row no-margin">
+            <div class="col-md-8 main">
+
+                <!-- Info alert begins -->
+
+                <div class="alert alert-info fade in">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Information!</strong> This is an info message that contains some text.
+                </div>
+
+                <!-- Error alert ends -->
+
+                <h2 class="sub-header">Features</h2>
+
+                <div class="row constrain">
+                    <div class="col-md-12 table-header-form">
+
+                        <a class="btn btn-success pull-right disabled" href="#" role="button"><i class="fa fa-plus"></i>Add new</a>
+
+                        <div class="col-sm-6 no-padding-left">
+                            <div class="input-group has-feedback">
+                                <input id="searchFeature" type="text" class="form-control" placeholder="Search features..." data-ng-model="searchFeature.feature" data-enter-pressed="applyFilter()" />
+                                <a class="close clear-search " data-ng-click="resetFilter()">&times;</a>
+                                <span class="input-group-btn" data-ng-click="applyFilter()">
+                                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="table-responsive">
+                    <table class="table table-striped align-last">
+                        <thead>
+                            <tr>
+
+
+                                <th data-ms-filter-by-column="feature" data-table-source="featuresTable" data-clear-filters="clearColumnFilters">
+                                Name
+                    
+                                <th><a href="" class="btn btn-filter" data-ng-click="changeClassOnIcon()"><i data-ng-class="isClickedOnIcon ? 'fa fa-chevron-circle-up' :'fa fa-chevron-circle-down'" data-ng-click="sort('release_date')"></i></a>Release Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="item in featuresTable  | filter: {omit: '!true'}" data-ng-click="markRow(item,$index)" data-ng-class=" {selected : valueOfItem.id==item.id}">
+                                <td>{{item.feature}}
+                                </td>
+                                <td>{{item.release_date}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-4 movie-details main">
+                <h2 class="sub-header">New feature</h2>
+                <div class="well details clearfix">
+
+                    <form role="form">
+                        <div class="col-md-12">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="input1" class="control-label">Lookup:</label>
+                                    <input type="text" class="form-control" id="input1" placeholder="Search features from TMDB">
+                                </div>
+                                <div class="form-group">
+                                    <label for="input3" class="control-label">Name:</label>
+                                    <p class="form-text">RoboCop</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="input3" class="control-label">Duration:</label>
+                                    <p class="form-text">108 mins</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="input3" class="control-label">Rating:</label>
+                                    <p class="form-text">PG-13</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Release date:</label>
+                                    <p class="form-text">Feb 12, 2014</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="img-responsive poster" src="../mockups/img/robocop.jpg">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Tagline:</label>
+                            <p class="form-text">Crime has a new enemy.</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Synopsis:</label>
+                            <p class="form-text">In 2028 Detroit, when Alex Murphy - a loving husband, father and good cop - is critically injured in the line of duty, the multinational conglomerate OmniCorp sees their chance for a part-man, part-robot police officer.</p>
+                        </div>
+                        <div class="form-group last relative">
+                            <button type="submit" class="btn btn-sm btn-success" data-ng-click="saveFeature()">Save</button>
+                            <button type="submit" class="btn btn-sm btn-success">Save &amp; New</button>
+                            <button type="submit" class="btn btn-sm btn-default">Cancel</button>
+                            <button type="submit" class="btn btn-sm btn-default cancel-button">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

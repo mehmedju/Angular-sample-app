@@ -1,0 +1,104 @@
+﻿[
+    {
+        "id": "f55549b5-e449-4b0c-9f4b-8b33381f7d76123111",
+        "subject": "Veronica Mars",
+		"movieId": 21,
+        "from": "2013-10-22T14:00:00Z",
+        "to": "2013-10-22T16:30:00Z",
+        "data": {
+            "duration": "150",
+            "image": "../mockups/img/posters/veronicamars.jpg",
+            "rating": "PG-13",
+            "modifiers": [
+                {
+                    "name": "D-Box",
+					"icon":"../app/img/experiences/dbox.png"
+                },
+                {
+                    "name": "Imax",
+					"icon":"../app/img/experiences/imax.png"
+                },
+                {
+                    "name": "Thx",
+					"icon":"../app/img/experiences/thx.png"
+                },
+                {
+                    "name": "3D",
+					"icon":"../app/img/experiences/3d.png"
+                },
+                {
+                    "name": "4D",
+					"icon":"../app/img/experiences/4d.png"
+                },
+                {
+                    "name": "CC",
+					"icon":"../app/img/experiences/cc.png"
+                },
+                {
+                    "name": "5D",
+					"icon":"../app/img/experiences/5d.png"
+                }
+            ]
+        }
+    },
+    {
+        "id": "f55549b5-e449-4b0c-9f4b-8b33381f7d76123222",
+        "subject": "Mistaken For Strangers",
+		"movieId": 22,
+        "from": "2013-10-22T12:05:00.549Z",
+        "to": "2013-10-22T14:05:00.549Z",
+        "data": {
+            "duration": "120",
+            "image": "../mockups/img/posters/mistakenforstrangers.png",
+            "rating": "PG-13",
+            "modifiers": [
+                {
+                    "name": "D-Box",
+					"icon":"../app/img/experiences/dbox.png"
+                },
+                {
+                    "name": "Imax",
+					"icon":"../app/img/experiences/imax.png"
+                },
+                {
+                    "name": "4D",
+					"icon":"../app/img/experiences/4d.png"
+                },
+                {
+                    "name": "CC",
+					"icon":"../app/img/experiences/cc.png"
+                },
+                {
+                    "name": "5D",
+					"icon":"../app/img/experiences/5d.png"
+                }
+            ]
+        }
+    },
+    {
+        "id": "f55549b5-e449-4b0c-9f4b-8b33381f7d76123333",
+        "subject": "Cheap Thrills",
+		"movieId": 23,
+        "from": "2013-10-22T15:00:00Z",
+        "to": "2013-10-22T17:00:00Z",
+        "data": {
+            "duration": "120",
+            "image": "../mockups/img/posters/cheapthrills.jpg",
+            "rating": "PG-13",
+            "modifiers": [
+                {
+                    "name": "D-Box",
+					"icon":"../app/img/experiences/dbox.png"
+                },
+                {
+                    "name": "Imax",
+					"icon":"../app/img/experiences/imax.png"
+                },
+                {
+                    "name": "Thx",
+					"icon":"../app/img/experiences/thx.png"
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,9 @@
+﻿<div>
+    <div data-ng-if="$parent.$parent.$parent.$parent.zoom.isZoomInMode">
+        <div class='time-vertical-line' data-ng-style="{'left':(verticalLine.hours*4.166667+(4.166667/60*verticalLine.minutes))+'%'}"></div>
+    </div>
+    <div data-ng-if="!$parent.$parent.$parent.$parent.zoom.isZoomInMode">
+        <div class='time-vertical-line' data-ng-style="{'left':(verticalLine.hours*8+(8/60*verticalLine.minutes))+'em'}"></div>
+    </div>
+
+</div>

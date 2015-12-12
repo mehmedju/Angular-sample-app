@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>NCR CineCenral - Book Feature</title>
+
+    <!-- CSS -->
+    <link href="../app/css/msApp.min.css" rel="stylesheet">
+    <link href="../app/css/font-awesome.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="booking">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img class="img-responsive img-inline" src="img/logo-green.png" style="position:relative; top:-2px; opacity:0.5" />NCR CinéCentral</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="dashboard-feature.html">Sites</a></li>
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Films <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="dashboard-feature.html">Add a Feature</a></li>
+                <li><a href="dashboard-feature.html">Book a Feature</a></li>
+                <li><a href="dashboard-feature.html">Schedule a Feature</a></li>
+                <li class="divider"></li>
+                <li><a href="dashboard-feature.html">Help</a></li>
+              </ul>
+            </li>
+            <li><a href="dashboard-feature.html">Products</a></li>
+            <li><a href="dashboard-feature.html">Revenue Audit</a></li>
+            <li><a href="dashboard-feature.html">Promotions</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="#"><i class="fa fa-dot-circle-o brand icon-separated"></i>Signed in as John Smith</a></li> -->
+            <li><a href="index.html"><i class="fa fa-sign-out"></i> Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row no-margin">
+        <div class="col-md-12 main">
+          
+          <h2 class="sub-header">Ticket types</h2>
+            <div class="row">
+            <div class="col-md-12 distance-top">
+            </div>
+            </div>
+
+          <div class="row constrain">
+              <div class="col-md-2 table-header-form">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-caret-left"></i></span>
+                      <input type="text" class="form-control" placeholder="20/08/2014" >
+                      <span class="input-group-addon"><i class="fa fa-caret-right"></i></span>
+                    </div>
+                            </div>
+            <div class="col-md-3 table-header-form">    
+
+                    </div>
+              <div class="col-md-7 table-header-form">                                                  <div class="form-group">
+              <a class="btn btn-default pull-right" href="#" role="button"><i class="fa fa-plus"></i> Add new ticket type</a>
+                  </div>
+                    </div>
+          </div>
+            
+          </div>          <div class="table-responsive">
+            <table class="table table-striped pricing-table-responsive">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th><div class="price-table-header-arrows-left"><i class="fa fa-angle-left"></i> </div>Adult <span class="chart-icon-left" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-bar-chart-o"></i></span></th>
+                  <th>Child <span class="chart-icon-left" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-bar-chart-o"></i></span></th>
+                  <th>Senior <span class="chart-icon-left" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-bar-chart-o"></i></span></th>
+                  <th>Military <span class="chart-icon-left" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-bar-chart-o"></i></span><div class="price-table-header-arrows"><i class="fa fa-angle-right"></i> </div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="table-vertical-alignment relative"><div class="day-part-table">Early bird</div><div class="time-widget-table"><i class="fa fa-clock-o"></i> 08:00 AM</div><div class="time-widget-table"><i class="fa fa-clock-o"></i> 12:00 PM</div></td>
+                  <td>5.00 $</td>
+                  <td>5.00 $</td>
+                  <td>5.00 $</td>
+                  <td>5.00 $</td>               
+                </tr>
+                <tr>
+                  <td class="table-vertical-alignment relative"><div class="day-part-table">Matinee</div><div class="time-widget-table"><i class="fa fa-clock-o"></i> 12:00 PM</div><div class="time-widget-table"><i class="fa fa-clock-o"></i> Not set</div></td>
+                  <td>5.00 $</td>
+                  <td>5.00 $</td>
+                  <td>5.00 $</td></td>
+                  <td>5.00 $</td>               
+                </tr>
+                <tr>
+                  <td class="table-vertical-alignment relative"><div class="day-part-table">Evening</div><div class="time-widget-table"><i class="fa fa-clock-o"></i> 04:00 PM</div><div class="time-widget-table"><i class="fa fa-clock-o"></i> 11:00 PM</div></td>
+                  <td>5.00 $</td>
+                  <td>5.00 $</td>
+                  <td>5.00 $</td>
+                  <td>5.00 $</td>               
+                </tr>
+              </tbody>
+            </table>
+            </div>
+                                                                 <div class="row">
+                    <div class="col-sm-12">
+              <a class="btn btn-default pull-left" href="#" role="button"><i class="fa fa-plus"></i> Add new day part</a><button type="button" class="btn btn-primary pull-right margin-right-buttons" data-dismiss="modal">Edit</button>
+            
+
+
+                    </div>
+                    </div>
+        </div>
+      </div>
+    </div>
+      
+      
+ <!-- Modal history -->
+
+<div class="modal modal-wide modal-height" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-pricing">
+        <div class="modal-content modal-pricing-font">
+         <div class="modal-header modal-header-pricing">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Pricing history</h4>
+          </div>
+          <div class="modal-body modal-body-height"> 
+              <div class="row">
+              <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="input3" class="control-label">Price:</label>
+                    <input type="text" class="form-control" id="input1" placeholder="Price">
+                  </div>                  
+            </div>
+                  <div class="col-md-4">
+                <div class="form-group">
+                <label  class="control-label">Effective from:</label>
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" show-button-bar="false" close-on-date-selection="false" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Select date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>
+                </div>                  
+                </div>
+                  <div class="col-md-4">
+                                  <div class="form-group">
+                <label  class="control-label">Effective to:</label>
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Select date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>
+                    </div>
+                  </div>
+              </div>
+                <form role="form"> 
+                <div class="col-md-12 no-padding-left">
+                              <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>
+                    
+                    <div class="dropdown display-inline">
+                       <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                      <ul class="dropdown-menu filter" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-asc icon-separated"></i>Sort A - Z</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-desc icon-separated"></i>Sort Z - A</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation" class="filter-search">
+                          <p>Filter &middot; <a href="#">Select all</a> &middot; <a href="#">Clear</a></p>                        
+                          <input type="text" class="form-control input-sm" placeholder="Search...">
+                          <div class="filter-options">
+                            <ul>
+                              <li class="active">Something</li>
+                              <li class="active">Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li class="filter-confirmation">
+                          <button type="button" class="btn btn-success btn-sm">OK</button>
+                          <button type="button" class="btn btn-default btn-sm">Cancel</button>
+                        </li>
+                      </ul>
+                    </div>
+                      Ticket Type
+                  </th>
+                  <th>
+                    <div class="dropdown display-inline">
+                      <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                    </div>
+                    Price
+                  </th>
+                  <th>
+                    <div class="dropdown display-inline">
+                      <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                    </div>
+                    Effective from Date
+                  </th>
+                  <th>
+                    <div class="dropdown display-inline">
+                      <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                    </div>
+                    Effective to Date
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Adult</td>
+                  <td>$10.99</td>
+                  <td>Jan 20 2014</td>
+                  <td>Jun 22 2014</td>
+                </tr>
+                <tr>
+                  <td>Adult</td>
+                  <td>$8.99</td>
+                  <td>Jan 20 2014</td>
+                  <td>Aug 12 2014</td>
+                </tr>
+                <tr>
+                  <td>Adult</td>
+                  <td>$8.99</td>
+                  <td>Jan 20 2014</td>
+                  <td>Aug 12 2014</td>
+                </tr>
+                <tr>
+                  <td>Adult</td>
+                  <td>$5.99</td>
+                  <td>Jan 20 2014</td>
+                  <td>Sep 21 2014</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+                  </div>
+                </form>
+        </div> 
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    <!-- JavaScript
+    ================================================== -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+        e.stopPropagation();
+    });
+    </script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.10.0.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

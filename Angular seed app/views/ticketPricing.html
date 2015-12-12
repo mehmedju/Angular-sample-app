@@ -1,0 +1,338 @@
+<div class="booking" data-ng-controller="ticketPricingCtrl">
+	<div class="container-fluid">
+		<div class="row no-margin">
+			<div class="col-md-12 main">
+
+				<h2 class="sub-header">Ticket types</h2>
+				<div class="row">
+					<div class="col-md-12 distance-top">
+					</div>
+				</div>
+
+				<div class="row constrain">
+					<div class="col-md-2 table-header-form">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-caret-left"></i></span>
+							<input type="text" class="form-control" placeholder="20/08/2014">
+							<span class="input-group-addon"><i class="fa fa-caret-right"></i></span>
+						</div>
+					</div>
+					<div class="col-md-6 table-header-form">
+					</div>
+					<div class="col-md-4 table-header-form no-padding-right">
+						<button type="button" class="btn btn-default pull-right" data-ng-click="addTicketClass()"><i class="fa fa-plus"></i> Add new ticket type</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 no-padding-left no-padding-right">
+				<div class="table-responsive">
+					<table class="table table-striped pricing-table-responsive">
+						<thead>
+							<tr>
+								<th>&nbsp;</th>
+								<th data-ng-repeat="ticketClass in visibleticketClasses = (ticketClasses | msStartFrom:currentPage | limitTo:columnsPerPage)" class="relative " style="height:60px;">
+									<div class="price-table-header-arrows-left" data-ng-if="$first && currentPage!=0" data-ng-click="previousPage()"><i class="fa fa-angle-left"></i></div>
+									<div data-ng-show="!isTicketClassInEditMode(ticketClass.id)" class="relative">
+										<!--
+<span data-ng-click="startTicketClassEditing(ticketClass); setFocusOn('ticketClass', ticketClass.id)" >{{ticketClass.name}}  
+</span>-->
+										<!--
+<span data-ng-show="!editingMode" class="chart-icon-left" data-ng-click="showHistoryModal(ticketClass)"><i class="fa fa-bar-chart-o"></i></span>
+--><div class="ticket-class-name-title">{{ticketClass.name}}</div>
+										<div class="ticket-class-name-subtitle"><i class="fa fa-th-list"></i> Discount ticket</div>
+										<div class="ticket-class-name-additional-info"><i class="fa fa-ellipsis-h"></i></div>
+
+										<div data-ng-show="editingMode">
+											<div class="controls-table-rows-headers">
+												<div class="controls-table-rows-headers-inner" data-ng-click="bulkPriceEditing('ticketClass', ticketClass.id)">
+													<i class="fa fa-list"></i>
+												</div>
+												<div class="controls-table-rows-headers-inner" data-ng-click="removeTicketClass(ticketClass.id)"><i class="fa fa-times-circle"></i></div>
+											</div>
+											<div class="popover-multiple-price-edit" data-ng-include="'../views/partials/bulkPriceModifier.html'"
+												 data-ng-if="bulkPriceEdit.type == 'ticketClass' && bulkPriceEdit.id == ticketClass.id">
+											</div>
+										</div>
+										<div class="popover-ticket-type-behaviors">
+											<div class="popover-head">Ticket type details</div>
+											<div class="popover-content popover-content-center popover-no-padding ">
+												<div class="popover-tabs">
+													<div class="active">Edit</div>
+													<div><a href="">Pricing</a></div>
+													<div><a href="">History</a></div>
+												</div>
+												<form>
+													<div class="col-xs-12">
+														<div class="form-group popover-ticket-type-behaviors-form-group">
+															<label for="input4" class="control-label popover-ticket-type-behaviors-label">Ticket type name:</label>
+															<input type="text" class="form-control" placeholder="Name">
+														</div>
+													</div>
+													<div class="col-xs-12">
+														<div class="form-group popover-ticket-type-behaviors-form-group">
+															<label for="input4" class="control-label popover-ticket-type-behaviors-label">Behavior:</label>
+															<select class="form-control">
+																<option>Standard</option>
+																<option>Discount</option>
+																<option>Pass</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-xs-12">
+														<div class="form-group popover-ticket-type-behaviors-form-group">
+															<label for="input4" class="control-label popover-ticket-type-behaviors-label">Charge value:</label>
+															<input type="text" class="form-control" placeholder="Value">
+														</div>
+													</div>
+													<div class="col-xs-6 no-padding-right">
+														<div class="form-group popover-ticket-type-behaviors-form-group">
+															<label for="input4" class="control-label popover-ticket-type-behaviors-label">Code:</label>
+															<input type="text" class="form-control" placeholder="TP01D01">
+														</div>
+													</div>
+													<div class="col-xs-6">
+														<div class="form-group popover-ticket-type-behaviors-form-group">
+															<label for="input4" class="control-label popover-ticket-type-behaviors-label">Face:</label>
+															<input type="text" class="form-control" placeholder="$ 1.00">
+														</div>
+													</div>
+													<div class="col-xs-12 additional-face-values-title">
+														<span><a href="" role="button"><i class="fa fa-angle-down icon-separated"></i>Manage additional face values</a></span>
+													</div>
+													<div class="col-xs-6">
+														<div class="form-group popover-ticket-type-behaviors-form-group">
+															<input type="text" class="form-control" placeholder="TP01D02">
+														</div>
+													</div>
+													<div class="col-xs-4 no-padding-right no-padding-left">
+														<div class="form-group popover-ticket-type-behaviors-form-group">
+															<input type="text" class="form-control" placeholder="$ 1.00">
+														</div>
+													</div>
+													<div class="col-xs-2 no-padding-left no-padding-right">
+														<i class="fa fa-minus-circle delete-additional-face-value"></i>
+													</div>
+													<div class="col-xs-6">
+														<div class="form-group popover-ticket-type-behaviors-form-group">
+															<input type="text" class="form-control" placeholder="TP01D03">
+														</div>
+													</div>
+													<div class="col-xs-4 no-padding-right no-padding-left">
+														<div class="form-group popover-ticket-type-behaviors-form-group">
+															<input type="text" class="form-control" placeholder="$ 1.00">
+														</div>
+													</div>
+													<div class="col-xs-2 no-padding-left no-padding-right">
+														<i class="fa fa-minus-circle delete-additional-face-value"></i>
+													</div>
+													<div class="col-xs-12 add-aditional-face-value">
+														<span><a href="" role="button"><i class="fa fa-plus-circle"></i> Additional face value</a></span>
+													</div>
+													<div class="col-xs-12">
+														<div class="form-group popover-ticket-type-behaviors-form-group">
+															<label for="input4" class="control-label popover-ticket-type-behaviors-label">Revenue account:</label>
+															<select class="form-control">
+																<option>All</option>
+																<option>2</option>
+																<option>3</option>
+																<option>4</option>
+																<option>5</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-xs-12 no-padding-left no-padding-right">
+														<button type="button" class="btn btn-success buttons-popover-margins" >Apply</button>
+														<button type="button" class="btn btn-default buttons-popover-margins" >Close</button>
+														<button type="button" class="btn btn-danger buttons-popover-margins pull-right" style="margin-right:10px;">Delete</button>
+													</div>
+												</form>
+											</div>
+										</div>
+										<!--										<div class="popover-ticket-type-behaviors">
+<div class="popover-head">Ticket type details</div>
+<div class="popover-content popover-content-center popover-no-padding">
+<div class="popover-tabs">
+<div><a href="">Edit</a></div>
+<div class="active">Pricing</div>
+<div>History</div>
+</div>
+<div class="col-xs-12 popover-ticket-pricing-body">
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<th>
+<div class="dropdown display-inline">
+<a href="" class="btn btn-filter dropdown-toggle" type="button" id="A2" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+</div>
+Effective Date
+</th>
+<th>
+<div class="dropdown display-inline">
+<a href="" class="btn btn-filter dropdown-toggle" type="button" id="A1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+</div>
+Price
+</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jan 20 2014</td>
+<td>$10.99</td>
+</tr>
+<tr>
+<td>Jan 20 2014</td>
+<td>$8.99</td>
+</tr>
+<tr>
+<td>Jan 20 2014</td>
+<td>$8.99</td>
+</tr>
+<tr>
+<td>Jan 20 2014</td>
+<td>$5.99</td>
+</tr>
+<tr>
+<td>Jan 20 2014</td>
+<td>$5.99</td>
+</tr>
+<tr>
+<td>Jan 20 2014</td>
+<td>$5.99</td>
+</tr>
+<tr>
+<td>Jan 20 2014</td>
+<td>$5.99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>-->
+										<!--																				<div class="popover-ticket-type-behaviors">
+<div class="popover-head">Ticket type details</div>
+<div class="popover-content popover-content-center popover-no-padding">
+<div class="popover-tabs">
+<div><a href="">Edit</a></div>
+<div class="active">Pricing</div>
+<div><a href="">History</a></div>
+</div>
+<div class="col-xs-12 popover-ticket-pricing-body">
+<form>
+<input type="text" class="form-control text-field-font-normal" id="input1" placeholder="0.00" data-ng-model="bulkPriceEdit.amount">
+<div class="radio-button-popover" data-ng-click="bulkPriceEdit.modifier = 'increase'">
+<input type="radio" name="radiog_dark" id="radio4" class="css-checkbox-popover" /><label for="radio4" class="css-label-popover radGroup2">Increase</label>
+</div>
+<div class="radio-button-popover" data-ng-click="bulkPriceEdit.modifier = 'decrease'">
+<input type="radio" name="radiog_dark" id="radio5" class="css-checkbox-popover" checked="checked" /><label for="radio5" class="css-label-popover radGroup2">Decrease</label>
+</div>
+<div class="radio-button-popover-last" data-ng-click="bulkPriceEdit.modifier = 'override'">
+<input type="radio" name="radiog_dark" id="radio6" class="css-checkbox-popover" /><label for="radio6" class="css-label-popover radGroup2">Override</label>
+</div>
+<button type="button" class="btn btn-default pull-right buttons-popover-margins" data-ng-click="cancelBulkPriceEditing()">Cancel</button>
+<button type="button" class="btn btn-success pull-right buttons-popover-margins margin-right-buttons" data-ng-click="applyBulkPriceEditing()">Apply</button>
+</form>
+</div>
+</div>
+</div>-->
+									</div>
+									<div data-ng-show="isTicketClassInEditMode(ticketClass.id)">
+										<div class="form-horizontal">
+											<input type="text" class="form-control table-fields-ticket-pricing field-popover-inline" data-ng-model="ticketClass.name" placeholder="Enter Ticket Class Name"
+												   data-ms-focus-editing-element="focusedElement" data-object-type="ticketClass" data-object-id="{{ticketClass.id}}" />
+											<button type="button" class="btn btn-primary checkmark-edit-mode" data-ng-click="closeTicketClassEditing(ticketClass);"><i class="fa fa-check"></i></button>
+											<button type="button" class="btn btn-default cancel-edit-mode" data-ng-click="closeTicketClassEditing(ticketClass, true);"><i class="fa fa-times"></i></button>
+										</div>
+									</div>
+									<div class="price-table-header-arrows" data-ng-if="$last && !isLastPage()" data-ng-click="nextPage()"><i class="fa fa-angle-right"></i></div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-ng-repeat="data in orderedTicketClassData = (ticketClassData | orderBy:orderByStartTime)">
+								<td class="table-vertical-alignment relative" data-ng-show="!isDayPartInEditMode(data.dayPart.id)">
+									<div>
+										<div class="day-part-table" data-ng-click="startDayPartEditing(data.dayPart); setFocusOn('dayPart', data.dayPart.id)">{{data.dayPart.name}}</div>
+										<div class="time-widget-table relative" data-ng-class="editingMode ? 'startime-edit': 'startime-view'">
+											<div data-ng-click="dayPartTimeEditing('startTime', data.dayPart)">
+												<i class="fa fa-clock-o"></i>
+												&nbsp;{{data.dayPart.startTime | date:'shortTime'}} - {{(data.dayPart.endTime | date:'shortTime') || 'N/A'}}
+											</div>
+											<div data-ng-include="'../views/partials/ticketPricingTimePicker.html'" data-ng-init="dayPartLabel = 'start time'" data-ng-if="dayPartTime.type == 'startTime' && dayPartTime.id == data.dayPart.id"></div>
+										</div>
+									</div>
+									<div class="controls-table-rows-headers editingMode" data-ng-show="editingMode">
+										<div class="controls-table-rows-headers-inner" data-ng-click="bulkPriceEditing('dayPart', data.dayPart.id)"><i class="fa fa-list"></i></div>
+										<div class="controls-table-rows-headers-inner" data-ng-if="orderedTicketClassData.length > 1" data-ng-click="removeDayPart(data.dayPart)"><i class="fa fa-times-circle"></i></div>
+									</div>
+									<div class="popover-multiple-price-edit-row" data-ng-include="'../views/partials/bulkPriceModifier.html'"
+										 data-ng-if="bulkPriceEdit.type == 'dayPart' && bulkPriceEdit.id == data.dayPart.id">
+									</div>
+
+								</td>
+								<td class="table-vertical-alignment relative edit-mode-left-align" data-ng-show="isDayPartInEditMode(data.dayPart.id)">
+									<input type="text" class="form-control table-fields-ticket-pricing-day-parts field-popover-inline" data-ng-model="data.dayPart.name" placeholder="Enter DayPart Name"
+										   data-ms-focus-editing-element="focusedElement" data-object-type="dayPart" data-object-id="{{data.dayPart.id}}" />
+									<button type="button" class="btn btn-primary checkmark-edit-mode" data-ng-click="closeDayPartEditing(data.dayPart);"><i class="fa fa-check"></i></button>
+									<button type="button" class="btn btn-default cancel-edit-mode" data-ng-click="closeDayPartEditing(data.dayPart, true)"><i class="fa fa-times"></i></button>
+								</td>
+								<td data-ng-repeat="ticketClass in visibleticketClasses" data-ng-click="triggerEditTableMode(); setFocus = true">
+									<div data-ng-show="!editingMode">{{data.TicketClass[ticketClass.id] | currency}}</div>
+									<span data-ng-form="myForm">
+										<input type="text" name="name" class="form-control table-fields-ticket-pricing" placeholder="0.00$" data-ms-clear-cell-highlighing="editingMode"
+											   data-ng-class="{'highlight-field': data.TicketClass[ticketClass.id] != oldValue}"
+											   data-ng-show="editingMode" data-ms-in-cell-focus="setFocus" data-ng-model="data.TicketClass[ticketClass.id]" />
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<a class="btn btn-default pull-left" role="button" data-ng-click="addDayPart()"><i class="fa fa-plus"></i> Add new day part</a>
+					<button type="button" class="btn btn-primary pull-right margin-right-buttons" data-ng-show="!editingMode" data-ng-click="editingMode=true; resetForm=false">Edit</button>
+					<button type="button" class="btn btn-default pull-right" data-ng-show="editingMode" data-ng-click="editingMode=false; resetForm=true">Cancel</button>
+					<button type="button" class="btn btn-primary pull-right margin-right-buttons" data-ng-show="editingMode" data-ng-click="editingMode=false; resetForm=false">Save</button>
+				</div>
+			</div>
+		</div>
+		<div class="row no-margin-left-right">
+			<div class="dimensions-separator">
+				<span class="label label-success widgets-table-separator">Price modifiers</span>
+			</div>
+		</div>
+		<div class="table-responsive" data-ng-controller="ticketPricingModifiersCtrl">
+			<table class="table table-striped dimensions-table">
+				<thead>
+				</thead>
+				<tbody>
+					<tr data-ng-repeat="modifier in modifiers">
+						<td class="relative">
+							<div class="logo-tags"><img alt="Modifier icon" class="img-responsive image-width-tags" data-ng-src="{{modifier.smallIcon}}"></div>
+							<div class="controls-table-rows-headers">
+								<div class="controls-table-rows-headers-inner" data-ng-click="showEditModifierModal(modifier, true)"><i class="fa fa-pencil"></i></div>
+								<div class="controls-table-rows-headers-inner" data-ng-click="deleteModifier(modifier)"><i class="fa fa-times-circle"></i></div>
+							</div>
+						</td>
+						<td data-ng-repeat="ticketClass in visibleticketClasses" data-ng-init="m = getModifierForTicketClass(ticketClass, modifier)">
+							<span class="not-applicable-grid" data-ng-if="m.omit"><i class="fa fa-ban"></i></span>
+							<span  class="relative" data-ng-if="!m.omit">
+								{{m.value | currency: currencySymbol}}
+								<span class="arrow-up-modifier icon-separated-left modifiers-type-icon" data-ng-if="modifier.prices.modifierType == 'increase'"><i class="fa fa-caret-up"></i></span>
+								<span class="arrow-down-modifier icon-separated-left modifiers-type-icon" data-ng-if="modifier.prices.modifierType == 'decrease'"><i class="fa fa-caret-down"></i></span>
+								<span class="arrow-exchange-modifier icon-separated-left modifiers-type-icon" data-ng-if="modifier.prices.modifierType == 'override'"><i class="fa fa-caret-left"></i></span>                           						 </span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="col-md-4 table-header-form no-padding-left">
+				<button type="button" data-ng-controller="ticketPricingModifiersCtrl" class="btn btn-default" data-ng-click="addNewModifier()"><i class="fa fa-plus"></i> Add a price modifier</button>
+			</div>
+		</div>
+	</div>
+</div>

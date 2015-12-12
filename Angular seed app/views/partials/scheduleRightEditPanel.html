@@ -1,0 +1,153 @@
+<div class="col-md-3 movie-details main" data-ng-if="editForm.visibility">
+    <div class="well details clearfix list-autocomplete-dropdown">
+
+        <form role="form" focus-input="focusOn.dateField" name="scheduleForm">
+            <div class="form-group">
+            </div>
+            <div class="list-results" data-ng-if="newSchedule.sites.length">
+                <div class="flat-list" data-ng-repeat="site in newSchedule.sites">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <p class="title">{{site.name}}</p>
+                            <p class="description">{{site.address}} &middot; {{site.city}} &middot; {{site.state}}</p>
+                        </div>
+                        <div class="col-sm-2 icon-middle" data-ng-click="removeSelectedSite(site)">
+                            <i class="fa fa-times icon-close"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Date:</label>
+                <div class="input-group">
+                    <input name="scheduleDate" required id="scheduleDate" type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="selectedFeature.from" is-open="datepickers.featureDate"
+                        min-date="2013-06-22" max-date="'2025-06-22'" data-show-button-bar="false" required id="releaseModel" name="releaseModel" data-datepicker-options="datePickerOptions" tabindex="1" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" data-ng-click="showDatepicker($event, 'featureDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+                <!-- <label for="inputAudName" class="control-label">July, 2014 Friday</label>-->
+            </div>
+            <div class="form-group">
+                <label class="control-label">Feature:</label>
+                <div>
+                    <div class="filter-field-full-width" id="typeaheadFeature"
+                        data-ms-type-ahead-drop-down="allExistingFeatures"
+                        data-type-ahead-label="name"
+                        data-ng-model="newSchedule.feature"
+                        data-enable-multiple-selection="false"
+                        data-focus-on-tab-selection="typeaheadAuditorium"
+                        data-ms-required-name="feature"
+                        tabindex="2">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Auditorium:</label>
+                <div class="filter-field-full-width" id="typeaheadAuditorium"
+                    data-ms-type-ahead-drop-down="data"
+                    data-type-ahead-label="description"
+                    data-ng-model="newSchedule.auditoriums"
+                    data-enable-multiple-selection="false"
+                    data-focus-on-tab-selection="scheduleDate"
+                    data-ms-required-name="auditorium"
+                    tabindex="3">
+                </div>
+            </div>
+            <!--   <div class="list-results" data-ng-if="newSchedule.auditoriums.length">
+                <div class="flat-list" data-ng-repeat="auditorium in newSchedule.auditoriums">
+                    <div class="row relative">
+                        <div class="remove-list-item-icon" data-ng-click="deleteSelectedAuditorium()"><i class="fa fa-times"></i></div>
+                        <div class="col-sm-10">
+                            <p class="title">{{auditorium.description}}</p>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <div class="row no-margin">
+                <div class="col-xs-3 no-padding-left">
+                    <div>
+                        <div data-timepicker="" data-ng-model="selectedFeature.from" ng-change="changed()" hour-step="timePickerOptions.hstep" minute-step="timePickerOptions.mstep" show-meridian="ismeridian" data-ms-timepicker-propagate-tabindex="[4,5]"></div>
+                    </div>
+                </div>
+                <div class="col-xs-9 no-padding-right">
+                    <div style="margin-top: 32px; font-size: 13px; font-weight: bold; border-left: 2px solid #5cb85c; padding-left: 25px;"><i class="fa fa-clock-o"></i>Select start time</div>
+                    <div style="font-size: 11px; color: #999; border-left: 2px solid #5cb85c; padding-left: 25px;" data-ng-if="newSchedule.feature[0]">Performance ends on {{selectedFeature.to | date:'MM/dd/yyyy @ HH:mm'}}</div>
+                    <div style="font-size: 11px; color: #999; border-left: 2px solid #5cb85c; padding-left: 25px;" data-ng-if="!newSchedule.feature[0]">End time is calculated based on duration</div>
+
+                </div>
+            </div>
+            <div class="col-xs-12"></div>
+            <div class="row no-margin-left-right pricing-preview-margin">
+                <div class="col-xs-12 no-padding-left pricing-preview-margin" data-ng-show="newSchedule.feature">
+                    <label class="control-label">Experiences:</label>
+                </div>
+                <div class="col-sm-9 no-padding-left" data-ng-show="mode.isAddingNewFeatureMode && newSchedule.feature">
+                    <span data-ng-repeat="item in selectedFeature.data.modifiers | limitTo : 6" class="logo-tags experiences-tags">
+                        <img data-ng-src="{{item.icon}}" />
+                    </span>
+                    <div class="col-sm-12 no-padding-left">
+                        <a href="" data-ng-click="openModifiersPopover()" data-ng-show="showMoreExp() && newSchedule.feature && mode.isAddingNewFeatureMode">+ {{experiences.remainingInvisibleModifiers}} More</a>
+
+                        <div class="popover-experiences-right-panel" data-ng-show="experiences.isShownAllModifiers">
+                            <div class="popover-head">Selected experiences</div>
+                            <div class="popover-content">
+                                <form>
+                                    <div class="logo-tags experiences-tags" data-ng-repeat="modifier in selectedFeature.data.modifiers">
+                                        <img class="img-responsive image-width-tags" data-ng-src="{{modifier.icon}}"><span class="delete-experience"><i class="fa fa-times"></i></span>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn-default pull-right buttons-popover-margins " data-dismiss="modal" data-ng-click="closeModifiersPopover()">Close</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-12 no-padding-left" data-ng-show="!mode.isAddingNewFeatureMode && newSchedule.feature">
+                    <span data-ng-repeat="item in selectedFeature.data.modifiers | limitTo : experiences.underLimitOfDisplayingModifiers" class="logo-tags experiences-tags">
+                        <img data-ng-src="{{item.icon}}" />
+                    </span>
+
+                    <div class="popover-experiences-right-panel" data-ng-show="experiences.isShownAllModifiers">
+                        <div class="popover-head">Selected experiences</div>
+                        <div class="popover-content">
+                            <form>
+                                <div class="logo-tags experiences-tags" data-ng-repeat="modifier in selectedFeature.data.modifiers">
+                                    <img data-ng-src="{{modifier.icon}}">
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="button" class="btn btn-default pull-right buttons-popover-margins " data-dismiss="modal" data-ng-click="closeModifiersPopover()">Close</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 no-padding-left">
+                    <span data-ng-show="showMoreExp()" style="margin-top: 10px;">
+                        <a href="" data-ng-click="openModifiersPopover()" data-ng-show="showMoreExp() && newSchedule.feature && !mode.isAddingNewFeatureMode">+ {{experiences.remainingInvisibleModifiers}} More</a>
+                    </span>
+                </div>
+            </div>
+            <div class="row no-margin-left-right" data-ng-show="experiences.isExperiencesVisible">
+            </div>
+            <div class="row margin-top-buttons-right-panel">
+                <div class="col-xs-12" style="margin-bottom: 15px;" data-ng-show="selectedFeature.data.modifiers">
+                    <span class="view-all-experiences relative"><a href="" data-ng-click="showPreviewPricingModal()">Edit Pricing</a></span>
+                </div>
+                <div class="col-sm-8 col-xs-8">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-sm btn-success margin-bottom-buttons" ng-disabled="!scheduleForm.$valid" data-ng-click="save(true)">Save</button>
+                        <button type="submit" class="btn btn-sm btn-success margin-bottom-buttons" ng-disabled="!scheduleForm.$valid" data-ng-click="saveAndNew()" focus-input tabindex="6">Save &amp; New</button>
+                        <button class="btn btn-sm btn-default" data-ng-click="cancel()">Cancel</button>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-4">
+                    <button type="submit" class="btn btn-sm btn-danger pull-right" data-ng-click="delete()"><i class="fa fa-times icon-separated"></i>Delete</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

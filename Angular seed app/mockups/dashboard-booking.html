@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>NCR CineCenral - Book Feature</title>
+
+    <!-- CSS -->
+    <link href="../app/css/msApp.min.css" rel="stylesheet">
+    <link href="../app/css/font-awesome.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="booking">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img class="img-responsive img-inline" src="img/logo-green.png" style="position:relative; top:-2px; opacity:0.5" />NCR CinéCentral</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="dashboard-feature.html">Sites</a></li>
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Films <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="dashboard-feature.html">Add a Feature</a></li>
+                <li><a href="dashboard-feature.html">Book a Feature</a></li>
+                <li><a href="dashboard-feature.html">Schedule a Feature</a></li>
+                <li class="divider"></li>
+                <li><a href="dashboard-feature.html">Help</a></li>
+              </ul>
+            </li>
+            <li><a href="dashboard-feature.html">Products</a></li>
+            <li><a href="dashboard-feature.html">Revenue Audit</a></li>
+            <li><a href="dashboard-feature.html">Promotions</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="#"><i class="fa fa-dot-circle-o brand icon-separated"></i>Signed in as John Smith</a></li> -->
+            <li><a href="index.html"><i class="fa fa-sign-out"></i> Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row no-margin">
+        <div class="col-md-9 main">
+          
+          <h2 class="sub-header">Bookings</h2>
+
+          <div class="row constrain">
+            <div class="col-md-12 table-header-form">
+
+              <a class="btn btn-success pull-right" href="#" data-toggle="modal" data-target="#myModal" role="button"><i class="fa fa-plus"></i> Add new</a>
+
+              <div class="col-lg-3 col-md-4 col-sm-4 no-padding-left" data-ng-controller="DatepickerDemoCtrl">
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" show-button-bar="false" close-on-date-selection="false" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Start date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-sm-4 no-padding-left">
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="End date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>   
+                      <div class="dropdown display-inline">
+                      <a href="" class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><i class="fa fa-chevron-circle-down"></i></a>
+                      <ul class="dropdown-menu filter" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-asc icon-separated"></i>Sort A - Z</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-sort-alpha-desc icon-separated"></i>Sort Z - A</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation" class="filter-search">
+                          <p>Filter &middot; <a href="#">Select all</a> &middot; <a href="#">Clear</a></p>                        
+                          <input type="text" class="form-control input-sm" placeholder="Search...">
+                          <div class="filter-options">
+                            <ul>
+                              <li class="active">Something</li>
+                              <li class="active">Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                              <li>Something</li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li class="filter-confirmation">
+                          <button type="button" class="btn btn-success btn-sm">OK</button>
+                          <button type="button" class="btn btn-default btn-sm">Cancel</button>
+                        </li>
+                      </ul>
+                    </div>
+                    Feature
+                  </th>
+                  <th><a href="#" class="btn btn-filter"><i class="fa fa-chevron-circle-down"></i></a> Release Date</th>
+                  <th><a href="#" class="btn btn-filter"><i class="fa fa-chevron-circle-down"></i></a> Site</th>
+                  <th><a href="#" class="btn btn-filter"><i class="fa fa-chevron-circle-down"></i></a> Start Date</th>
+                  <th><a href="#" class="btn btn-filter"><i class="fa fa-chevron-circle-down"></i></a> End Date</th>
+                  <th><a href="#" class="btn btn-filter"><i class="fa fa-chevron-circle-down"></i></a> Booking</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>300: Rise of an Empire</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>2014-02-20</td>
+                  <td>2014-02-20</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+                <tr>
+                  <td>Mr. Peabody &amp; Sherman</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+                <tr>
+                  <td>Non-Stop</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+                <tr>
+                  <td>The LEGO Movie</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+                <tr>
+                  <td>The Wind Rises</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+                <tr>
+                  <td>The Monuments Men</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+                <tr>
+                  <td>3 Days to Kill</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+                <tr>
+                  <td>12 Years a Slave</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+                <tr>
+                  <td>Mr. Peabody &amp; Sherman</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+                <tr>
+                  <td>Ride Along</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+                <tr>
+                  <td>RoboCop (2014)</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr> 
+                  <td>About Last Night (2014)</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>                
+                <tr>
+                  <td>Pompeii</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+                <tr>
+                  <td>American Hustle</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+                <tr>
+                  <td>Gravity</td>
+                  <td>2014-02-20</td>
+                  <td>North Point</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Mar 7, 2014</td>
+                  <td>Tiered 70/60/50</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-md-3 movie-details main">
+          <h2 class="sub-header">Book feature</h2>
+          <div class="well details clearfix">
+            
+                <form role="form">                
+                  <div class="form-group">
+                    <label for="input1" class="control-label">Feature:</label>
+                    <p>300: Rise of an Empire</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="input2" class="control-label">Studio:</label>
+                    <p>WB</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="input3" class="control-label">Release Date:</label>
+                    <p>10-February-2014</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="input4" class="control-label">Rating:</label>
+                    <p>R</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="input5" class="control-label">Site:</label>
+                    <input type="text" class="form-control" id="input3" placeholder="Site name">
+                  </div>
+                  <div class="form-group">
+                    <label for="input6" class="control-label">Start Date:</label>
+<div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" show-button-bar="false" close-on-date-selection="false" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Start date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>                  </div>
+                  <div class="form-group">
+                    <label for="input7" class="control-label">End Date:</label>
+<div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" show-button-bar="false" close-on-date-selection="false" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="End date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>                  </div>
+                  <div class="form-group">
+                    <label for="input4" class="control-label">Booking Terms:</label>
+                      <select class="form-control">
+                         <option>All</option>
+                         <option>2</option>
+                         <option>3</option>
+                         <option>4</option>
+                         <option>5</option>
+                       </select>
+                  </div>
+                  <div class="form-group last relative">
+                      <button type="submit" class="btn btn-sm btn-success">Save</button>
+                      <button type="submit" class="btn btn-sm btn-success">Save &amp; New</button>
+                      <button type="submit" class="btn btn-sm btn-default">Cancel</button>
+                      <button type="submit" class="btn btn-sm btn-danger cancel-button"><i class="fa fa-times icon-separated"></i>Delete</button>
+                  </div>
+                </form>
+                
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+<!-- Modal -->
+    <div class="modal modal-wide modal-height" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-booking">
+        <div class="modal-content modal-booking-font">
+         <div class="modal-header modal-header-booking">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Booking</h4>
+          </div>
+          <div class="modal-body modal-body-booking modal-body-height">
+            <div class="col-sm-6 no-padding-left">
+              <div class="form-group">
+                    <label for="inputAudName" class="control-label">Features:</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="inputAudName" placeholder="Start typing..."><span class="input-group-btn"><button class="btn btn-default green-btn-booking" type="button" href="#" data-toggle="modal" data-target="#myModal2" role="button"><i class="fa fa-plus"></i></button></span>
+                    </div>
+                  </div>
+            <div class="feature-results">
+                    <p class="clear-all-features"><a href="#">Remove all</a></p>
+                    <div class="list">
+                    <div class="row">
+                      <div class="col-sm-2">
+                        <img class="img-responsive poster" src="img/posters/grandbudapesthotel.jpg">
+                     </div>
+                     <div class="col-sm-8">
+                         <p class="title">Grand Budapest Hotel (2014)</p>
+                         <p class="description">100 min &middot; Jun 6, 2014 &middot; PG-13</p>
+                     </div>
+                     <div class="col-sm-2 icon-middle">
+                         <i class="fa fa-times icon-close"></i>
+                     </div>
+                     </div>
+                    </div>
+                <div class="list">
+                    <div class="row">
+                      <div class="col-sm-2">
+                        <img class="img-responsive poster" src="img/robocop.jpg">
+                     </div>
+                     <div class="col-sm-8">
+                         <p class="title">RoboCop (2014)</p>
+                         <p class="description">108 min &middot; Feb 12, 2014 &middot; R</p>
+                     </div>
+                     <div class="col-sm-2 icon-middle">
+                         <i class="fa fa-times icon-close"></i>
+                     </div>
+                     </div>
+                    </div>
+            </div>
+            </div>
+              <div class="col-sm-6 no-padding-right">
+                  <div class="col-sm-12 booking-right">
+                   <h4 class="divider">Select sites</h4>
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Quick find...">
+                      <a href="#" class="close clear-search hidden">&times;</a>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div><!-- /input-group -->
+                  <p><a href="#">Select all</a> &middot; <a href="#">Clear</a></p>
+                  <div class="checkbox-left">
+					<div class="checkbox-style">
+					<input id="demo_box_2" class="css-checkbox" type="checkbox" checked="checked" />
+					<label for="demo_box_2" name="demo_lbl_2" class="css-label">Alpharetta Theater</label>
+                      </div>
+                      					<div class="checkbox-style">
+					<input id="demo_box_3" class="css-checkbox" type="checkbox" checked="checked" />
+					<label for="demo_box_3" name="demo_lbl_3" class="css-label">Buckhead Amphitheater</label>
+                      </div>
+                      					<div class="checkbox-style">
+					<input id="demo_box_4" class="css-checkbox" type="checkbox" />
+					<label for="demo_box_4" name="demo_lbl_4" class="css-label"> San Fierro Grand Hall</label>
+                      </div>
+                      					<div class="checkbox-style">
+					<input id="demo_box_5" class="css-checkbox" type="checkbox" checked="checked" />
+					<label for="demo_box_5" name="demo_lbl_5" class="css-label">Alpharetta Theater</label>
+                      </div>
+                      					<div class="checkbox-style">
+					<input id="demo_box_6" class="css-checkbox" type="checkbox" checked="checked" />
+					<label for="demo_box_6" name="demo_lbl_6" class="css-label">Buckhead Amphitheater</label>
+                      </div>
+                      					<div class="checkbox-style">
+					<input id="demo_box_7" class="css-checkbox" type="checkbox" />
+					<label for="demo_box_7" name="demo_lbl_7" class="css-label"> San Fierro Grand Hall</label>
+                      </div>
+                  </div>
+                    </div>
+                                <div class="col-xs-6 col-sm-6 col-lg-6 no-padding-left" data-ng-controller="DatepickerDemoCtrl">
+                <label  class="control-label">Start date:</label>
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" show-button-bar="false" close-on-date-selection="false" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Select date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>
+              </div>
+
+              <div class="col-xs-6 col-sm-6 col-lg-6 no-padding-right">
+                <label  class="control-label">End date:</label>
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Select date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div>
+              </div>
+                                  <div class="col-lg-12 col-xs-12 col-sm-12  margin-top-terms">
+                <div class="form-group">
+                    <label for="input4" class="control-label">Booking Terms:</label>
+                      <select class="form-control">
+                         <option>All</option>
+                         <option>2</option>
+                         <option>3</option>
+                         <option>4</option>
+                         <option>5</option>
+                       </select>
+                  </div>
+              </div>
+                  </div>
+              
+              
+              
+              
+              
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Book</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+<!-- Modal feature -->
+
+<div class="modal modal-wide modal-height" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-booking">
+        <div class="modal-content modal-booking-font">
+         <div class="modal-header modal-header-booking">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Add new feature</h4>
+          </div>
+          <div class="modal-body  modal-body-booking modal-body-height"> 
+                <form role="form"> 
+                <div class="col-md-8 col-lg-8 col-xs-8 no-padding-left form-overflowy-scroll">
+                  <div class="form-group">
+                    <label for="input1" class="control-label">Lookup:</label>
+                    <input type="text" class="form-control" id="input1" placeholder="Search features from TMDB">
+                  </div>
+                  <div class="form-group">
+                    <label for="input3" class="control-label">Name:</label>
+                    <input type="text" class="form-control" id="input1" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="input3" class="control-label">Duration:</label>
+                    <input type="text" class="form-control" id="input1" placeholder="Duration">
+                  </div>
+                  <div class="form-group">
+                    <label for="input3" class="control-label">Rating:</label>
+                    <input type="text" class="form-control" id="input1" placeholder="Rating">
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Release date:</label>
+                <div class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Select date" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </div> 
+                </div>
+<div class="form-group">
+                    <label class="control-label">Tagline:</label>
+                    <input type="text" class="form-control" id="input1" placeholder="Tagline">
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Synopsis:</label>
+                      <textarea class="form-control" rows="8" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada felis leo, eget euismod odio convallis sed. Maecenas eu lacinia turpis. Phasellus vulputate nisl sed urna scelerisque interdum. Nullam nec nulla condimentum, laoreet quam ut, mattis est. Mauris malesuada dictum quam ut commodo. Morbi tincidunt purus erat. Cras dapibus leo sed quam laoreet imperdiet."></textarea>
+                  </div>
+                                      <p><a href="#">Select all</a> &middot; <a href="#">Clear</a></p>
+                                        <div class="checkbox-dimensions">
+					<div class="checkbox-style-dimensions">
+					<input id="demo_box_feat1" class="css-checkbox" type="checkbox" checked="checked" />
+					<label for="demo_box_feat1" name="demo_lbl_feat1" class="css-label">3D</label>
+                      </div>
+                      					<div class="checkbox-style-dimensions">
+					<input id="demo_box_feat2" class="css-checkbox" type="checkbox" checked="checked" />
+					<label for="demo_box_feat2" name="demo_lbl_feat2" class="css-label">IMAX</label>
+                      </div>
+                      					<div class="checkbox-style-dimensions">
+					<input id="demo_box_feat3" class="css-checkbox" type="checkbox" />
+					<label for="demo_box_feat3" name="demo_lbl_feat3" class="css-label">D-BOX</label>
+                      </div>
+                      					<div class="checkbox-style-dimensions">
+					<input id="demo_box_feat4" class="css-checkbox" type="checkbox" checked="checked"/>
+					<label for="demo_box_feat4" name="demo_lbl_feat4" class="css-label">Custom option</label>
+                      </div>                  
+                    </div>
+                  </div>
+                  <div class="col-md-4 no-padding-right">
+                  <img class="img-responsive poster" src="img/robocop.jpg">
+                  </div>
+                </form>
+        </div> 
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Add</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- JavaScript
+    ================================================== -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+        e.stopPropagation();
+    });
+    </script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.10.0.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
